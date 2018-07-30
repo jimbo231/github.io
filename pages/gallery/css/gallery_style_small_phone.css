@@ -1,0 +1,141 @@
+*{
+	/*Resets the regular settings to those we want*/
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+}
+
+body{
+	height: 100%;
+	background: #ddd;
+}
+
+.wrapper {
+	min-height: 100%;
+	width: 100%;
+	position: relative;
+}
+
+
+
+h2 {
+	position: fixed;
+	width: 100%;
+	padding: 30px;
+	background: #112233;
+	color: #fff;
+	font-family: big john;
+	text-align: center;
+	font-size: 16pt;
+	letter-spacing: 10px;
+	z-index: 1;
+}
+
+
+.navigation_bar {
+	position: fixed;
+	background: #fc575e;
+	margin-bottom: 10px;
+	width: 100%;
+	top: 80px;
+	z-index: 1;
+}
+
+nav {
+	height: 40px;
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+nav a{
+	display: block;
+	text-decoration: none;
+	font-family: monospace;
+	font-weight: bold;
+	font-size: 12pt;
+	color: #112233;
+}
+
+nav a:hover {
+	background-color: #223433;
+	color: #f0f1f5;
+}
+
+nav ul {
+	list-style: none;
+}
+
+/*this will over-run the class beneath it*/
+nav ul ul li {
+	width: 100%;
+}
+
+nav ul li {
+	float: left;
+	width: 25%;
+	height: 40px;
+	line-height: 40px;
+	background: #fc575e;
+}
+
+nav ul ul li {
+	position: relative;
+	display: none;
+}
+
+nav ul li:hover ul li {
+	display: block;
+	animation: navmenu 500ms;
+}
+
+/*creating our animation to call*/
+@keyframes navmenu {
+	0%{
+		opacity: 0;
+		top: 5px;
+	}
+	100%{
+		opacity: 1;
+		top: 0px;
+	}
+}
+
+.gallery_wrapper {
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	top: 140px;
+}
+
+.gallery_img img{
+	width: 100%;
+	height: 260px;
+	margin-bottom: 20px;
+	border:2px solid #112233;
+
+}
+
+.logo {
+	width: 60px;
+	height: 60px;
+	position: fixed;
+	left:10px;
+	top: 10px;
+	z-index: 100;
+}
+
+.shopping_cart {
+	width: 60px;
+	height: 60px;
+	position: fixed;
+	right: 10px;
+	top: 10px;
+	z-index: 100;
+}

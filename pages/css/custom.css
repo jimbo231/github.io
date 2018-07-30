@@ -1,0 +1,79 @@
+/* your styles go here */
+
+.personalise-image {
+  position: relative;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  max-width: 300px;
+  height: auto;
+  width: 100%;
+  margin-bottom: 20px;
+  /*border-bottom: 2px solid #495057;*/
+ 
+}
+
+
+.test {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  width: 100%;
+  max-width: 300px;
+  /*border-bottom: 2px solid #495057;*/
+ 
+}
+
+
+.two {
+  position: relative;
+  right: 40%;
+  bottom: 100px;
+ /* justify-content: center;*/
+  max-width: 70px;
+  height: auto;
+  width: 100%;
+  /*border-bottom: 2px solid #495057;*/
+ 
+}
+
+
+.three {
+  position: relative;
+  right: 110%;
+  top: 80px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  max-width: 200px;
+  height: auto;
+  width: 100%;
+  /*border-bottom: 2px solid #495057;*/
+ 
+}
+
+
+
+
