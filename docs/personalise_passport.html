@@ -323,7 +323,7 @@
 
         <!-- Grid -->
 
-        <div class="products-grid col-xl-9 col-lg-8 order-lg-2" >
+        <div class="products-grid col-xl-6 col-lg-8 order-lg-2">
           <!-- not sure we want this as a row product -->
       
             <!-- product-->
@@ -334,10 +334,117 @@
                   <!-- we need them to go under the passport when a phone screen -->
                   <img src="img/name_tags/1.png" class="img-fluid three can_be_dragged" draggable="true" id="name_tag">
                 </div>
-    
         </div>
         <!-- / Grid End-->
         
+<!-- Sidebar-->
+        <div class="sidebar col-xl-3 col-lg-4 order-lg-3">
+
+          <div class="sidebar-block px-3 px-lg-0 mr-lg-4"><a data-toggle="collapse" href="#colourFilterMenu" aria-expanded="false" aria-controls="colourFilterMenu" class="d-lg-none block-toggler">Filter by colour</a>
+            <!-- Size filter menu-->
+
+
+            <div id="colourFilterMenu" class="expand-lg collapse">
+              <h6 class="sidebar-heading d-none d-lg-block">Passport Colour </h6>
+              <form action="#" class="mt-4 mt-lg-0"> 
+              <div class="mt-4 mt-lg-0"> 
+                <ul class="list-inline mb-0 colours-wrapper" id="rello">
+
+                  <li class="list-inline-item" onclick ="change_passport('main_passport',this.value, this.id)" value="1" id="khaki">
+                    <label style="background-color: #efe7d5" data-allow-multiple class="btn-colour" id="clear_click"> </label>
+                  </li>
+
+                  <li class="list-inline-item" onclick ="change_passport('main_passport',this.value, this.id)" value="2" id="Beige">
+                    <label style="background-color: #998b6c" data-allow-multiple class="btn-colour" id="clear_click"> </label>
+                  </li>
+
+                  <li class="list-inline-item" onclick ="change_passport('main_passport',this.value, this.id)" value="3" id="lbrown">
+                    <label style="background-color: #8e4a12" data-allow-multiple class="btn-colour"> </label>
+                  </li>
+
+                  <li class="list-inline-item" onclick ="change_passport('main_passport',this.value, this.id)" value="4" id="brown">
+                    <label style="background-color: #a07b5d" data-allow-multiple class="btn-colour"> </label>
+                  </li>
+
+                  <li class="list-inline-item" onclick ="change_passport('main_passport',this.value, this.id)" value="5" id="dbrown">
+                    <label style="background-color: #564334" data-allow-multiple class="btn-colour"> </label>
+                  </li>
+
+                  <li class="list-inline-item" onclick ="change_passport('main_passport',this.value, this.id)" value="6" id="fgreen">
+                    <label style="background-color: #517a4a" data-allow-multiple class="btn-colour"> </label>
+                  </li>
+
+                  <li class="list-inline-item" onclick ="change_passport('main_passport',this.value, this.id)" value="7" id="dgreen">
+                    <label style="background-color: #253822" data-allow-multiple class="btn-colour"> </label>
+                  </li>
+
+                  <li class="list-inline-item" onclick ="change_passport('main_passport',this.value, this.id)" value="8" id="burgandy">
+                    <label style="background-color: #8e1c1c" data-allow-multiple class="btn-colour"> </label>
+                  </li>
+
+                  <li class="list-inline-item" onclick ="change_passport('main_passport',this.value, this.id)" value="9" id="dscarlett">
+                    <label style="background-color: #a83f5c" data-allow-multiple class="btn-colour"> </label>
+                  </li>
+
+                  <li class="list-inline-item" onclick ="change_passport('main_passport',this.value, this.id)" value="10" id="pink">
+                    <label style="background-color: #ed2f63" data-allow-multiple class="btn-colour"> </label>
+                  </li>
+
+                  <li class="list-inline-item" onclick ="change_passport('main_passport',this.value, this.id)" value="11" id="spink">
+                    <label style="background-color: #8e4848" data-allow-multiple class="btn-colour"> </label>
+                  </li>
+
+                  <li class="list-inline-item" onclick ="change_passport('main_passport',this.value, this.id)" value="12" id="rgold">
+                    <label style="background-color: #b4c4c4" data-allow-multiple class="btn-colour"> </label>
+                  </li>
+
+                  <li class="list-inline-item" onclick ="change_passport('main_passport',this.value, this.id)" value="14" id="dgrey">
+                    <label style="background-color: #303d3d" data-allow-multiple class="btn-colour"> </label>
+                  </li>
+
+                  <li class="list-inline-item" onclick ="change_passport('main_passport',this.value, this.id)" value="15" id="black">
+                    <label style="background-color: #000000" data-allow-multiple class="btn-colour"> </label>
+                  </li>
+
+            
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="sidebar-block px-3 px-lg-0 mr-lg-4"> <a data-toggle="collapse" href="#sizeFilterMenu" aria-expanded="false" aria-controls="sizeFilterMenu" class="d-lg-none block-toggler">Filter by size</a>
+            <!-- Size filter menu-->
+            <div id="sizeFilterMenu" class="expand-lg collapse"> 
+              <h6 class="sidebar-heading d-none d-lg-block"></h6>Name Tag Size
+              <form action="#" class="mt-4 mt-lg-0">  
+                <div class="form-group mb-1">
+                  <div class="custom-control custom-radio">
+                    <input id="size0" type="radio" name="size" checked class="custom-control-input">
+                    <label for="size0" class="custom-control-label">Small</label>
+                  </div>
+                </div>
+                <div class="form-group mb-1">
+                  <div class="custom-control custom-radio">
+                    <input id="size1" type="radio" name="size" class="custom-control-input">
+                    <label for="size1" class="custom-control-label">Medium</label>
+                  </div>
+                </div>
+                <div class="form-group mb-1">
+                  <div class="custom-control custom-radio">
+                    <input id="size2" type="radio" name="size" class="custom-control-input">
+                    <label for="size2" class="custom-control-label">Large</label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          
+        </div>
+        <!-- /Sidebar end-->
+
       </div>
     </div>
 
