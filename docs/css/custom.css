@@ -2,7 +2,7 @@
 
 .personalise-image {
   position: relative;
-  text-align: center;
+  /*
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11,69 +11,68 @@
   align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
+  justify-content: center;*/
+  margin-bottom: 10%;
+  height: auto;
+  width: 80%; 
+}
+
+
+/*This will align the main image in the center of the page*/
+.center_main_image {
+  display: flex;
   justify-content: center;
-  max-width: 300px;
-  height: auto;
-  width: 100%;
-  margin-bottom: 20px;
-  /*border-bottom: 2px solid #495057;*/
- 
+  align-items: center;  
 }
 
 
-.test {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
+/*Need the charm image and the name tag to be 'absolute' so that there is no added border below it*/
+/*Having the width as a % keeps it the same when the screen is a differnt size*/
+
+.charm {
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
+  position: absolute;
+  left: 60%;
+  bottom: 65%;
+  height: auto;
+  width: 18%; 
+}
+
+
+.name_tag {
+  display: flex;
+  position: absolute;
+  left: 20%;
+  bottom: 30%;
+  height: auto;
+  width: 55%; 
+}
+
+
+/*making the charm thumbnails pictures*/
+.charm_thumbnails img{
+
+  height: auto;
+  max-width: 68px;
+ 
+}
+
+.charm_thumbnails {
+
+  display: flex;
   justify-content: flex-start;
-  width: auto;
-  height: auto;
-  width: 100%;
-  max-width: 300px;
-  /*border-bottom: 2px solid #495057;*/
- 
-}
-
-
-.two {
-  position: relative;
-  right: 40%;
-  bottom: 100px;
- /* justify-content: center;*/
-  max-width: 70px;
-  height: auto;
-  width: 100%;
-  /*border-bottom: 2px solid #495057;*/
- 
-}
-
-
-.three {
-  position: relative;
-  right: 110%;
-  top: 80px;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  max-width: 200px;
-  height: auto;
-  width: 100%;
-  /*border-bottom: 2px solid #495057;*/
- 
+  box-sizing: content-box;
+   border: 1px solid #e9ecef;
 }
 
-
+.test{
+  flex-wrap: wrap;
+  display: flex;
+  width: 100%;
+  max-height: 70vh;
+  overflow: auto;
+  justify-content: center;
+}
 
 

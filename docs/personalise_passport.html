@@ -186,7 +186,7 @@
         </ol>
         <!-- Hero Content-->
         <div class="hero-content pb-5 text-center">
-          <h1 class="hero-heading">Peronalise</h1>
+          <h1 class="hero-heading">Personalise</h1>
         </div>
       </div>
     </section>
@@ -207,7 +207,16 @@
         <!-- Sidebar-->
         <div class="sidebar col-xl-3 col-lg-4 order-lg-1">
 
-          <div class="sidebar-block px-3 px-lg-0 mr-lg-4"><a data-toggle="collapse" href="#colourFilterMenu" aria-expanded="false" aria-controls="colourFilterMenu" class="d-lg-none block-toggler">Filter by colour</a>
+        	<!-- name input box -->
+	 		<div class="sidebar-block px-3 px-lg-0 mr-lg-4">
+	        	<form action="#" id="name_input">
+	                <div class="input-group mb-3">
+	                  <input type="text" placeholder="Enter Name" class="form-control bg-transparent">
+	                </div>
+	              </form>
+	         </div>     	
+
+          <div class="sidebar-block px-3 px-lg-0 mr-lg-4"><a data-toggle="collapse" href="#colourFilterMenu" aria-expanded="false" aria-controls="colourFilterMenu" class="d-lg-none block-toggler">Passport Colour</a>
             <!-- Size filter menu-->
 
 
@@ -273,8 +282,59 @@
                     <label style="background-color: #000000" data-allow-multiple class="btn-colour"> </label>
                   </li>
 
-            
-                  
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- name tag colour pallet picker -->
+          <div class="sidebar-block px-3 px-lg-0 mr-lg-4"><a data-toggle="collapse" href="#nameTagMenu" aria-expanded="false" aria-controls="nameTagMenu" class="d-lg-none block-toggler">Name tag colour</a>
+            <!-- Size filter menu-->
+
+
+            <div id="nameTagMenu" class="expand-lg collapse">
+              <h6 class="sidebar-heading d-none d-lg-block">Name Tag Colour </h6>
+              <form action="#" class="mt-4 mt-lg-0"> 
+              <div class="mt-4 mt-lg-0"> 
+                <ul class="list-inline mb-0 colours-wrapper" id="rello">
+
+                  <li class="list-inline-item" onclick ="change_name_tag('name_tag',this.value, this.id)" value="1" id="khaki">
+                    <label style="background-color: #efe7d5" data-allow-multiple class="btn-colour" id="clear_click"> </label>
+                  </li>
+
+                  <li class="list-inline-item" onclick ="change_name_tag('name_tag',this.value, this.id)" value="2" id="Beige">
+                    <label style="background-color: #998b6c" data-allow-multiple class="btn-colour" id="clear_click"> </label>
+                  </li>
+
+                  <li class="list-inline-item" onclick ="change_name_tag('name_tag',this.value, this.id)" value="3" id="lbrown">
+                    <label style="background-color: #8e4a12" data-allow-multiple class="btn-colour"> </label>
+                  </li>
+
+                  <li class="list-inline-item" onclick ="change_name_tag('name_tag',this.value, this.id)" value="4" id="brown">
+                    <label style="background-color: #a07b5d" data-allow-multiple class="btn-colour"> </label>
+                  </li>
+
+                  <li class="list-inline-item" onclick ="change_name_tag('name_tag',this.value, this.id)" value="5" id="dbrown">
+                    <label style="background-color: #564334" data-allow-multiple class="btn-colour"> </label>
+                  </li>
+
+                  <li class="list-inline-item" onclick ="change_name_tag('name_tag',this.value, this.id)" value="6" id="fgreen">
+                    <label style="background-color: #517a4a" data-allow-multiple class="btn-colour"> </label>
+                  </li>
+
+                  <li class="list-inline-item" onclick ="change_name_tag('name_tag',this.value, this.id)" value="7" id="dgreen">
+                    <label style="background-color: #253822" data-allow-multiple class="btn-colour"> </label>
+                  </li>
+
+                  <li class="list-inline-item" onclick ="change_name_tag('name_tag',this.value, this.id)" value="8" id="burgandy">
+                    <label style="background-color: #8e1c1c" data-allow-multiple class="btn-colour"> </label>
+                  </li>
+
+                  <li class="list-inline-item" onclick ="change_name_tag('name_tag',this.value, this.id)" value="9" id="dscarlett">
+                    <label style="background-color: #a83f5c" data-allow-multiple class="btn-colour"> </label>
+                  </li>
+
+                 
                 </ul>
               </div>
             </div>
@@ -282,10 +342,11 @@
 
 
 
-          <div class="sidebar-block px-3 px-lg-0 mr-lg-4"> <a data-toggle="collapse" href="#sizeFilterMenu" aria-expanded="false" aria-controls="sizeFilterMenu" class="d-lg-none block-toggler">Filter by size</a>
+          <div class="sidebar-block px-3 px-lg-0 mr-lg-4"> <a data-toggle="collapse" href="#sizeFilterMenu" aria-expanded="false" aria-controls="sizeFilterMenu" class="d-lg-none block-toggler">Name Tag Size</a>
             <!-- Size filter menu-->
             <div id="sizeFilterMenu" class="expand-lg collapse"> 
-              <h6 class="sidebar-heading d-none d-lg-block"></h6>Name Tag Size
+              <h6 class="sidebar-heading d-none d-lg-block">Name Tag Size </h6>
+
               <form action="#" class="mt-4 mt-lg-0">  
                 <div class="form-group mb-1">
                   <div class="custom-control custom-radio">
@@ -306,9 +367,17 @@
                   </div>
                 </div>
               </form>
+
+
             </div>
+
+
+
+
+
+
+
           </div>
-          
         </div>
         <!-- /Sidebar end-->
 
@@ -320,126 +389,148 @@
         </script>
 
 
+        <script type="text/javascript">
+          function change_name_tag(imgid,newimg,list_id){
+            document.getElementById(imgid).src = "img/name_tags/" + newimg +".png";
+          }
+        </script>
+
+        <script type="text/javascript">
+          function change_charm(img_id){
+            document.getElementById('charm_img').src = "img/charms/" + img_id +".png";
+          }
+
+        </script>
+
+
 
         <!-- Grid -->
 
-        <div class="products-grid col-xl-6 col-lg-8 order-lg-2">
+        <div class="col-xl-6 col-lg-8 order-lg-2">
           <!-- not sure we want this as a row product -->
       
             <!-- product-->
-                <div class="test">
-                  <img src="img/passport_colours/1.png" class="img-fluid personalise-image" id="main_passport">
+             <div class="center_main_image">
+                  <img src="img/passport_colours/1.png" class="personalise-image" id="main_passport">
+             </div>
                   <!-- need the img inside the div otherwise it cannot be moved - need to make it so you cannot move out the div-->
-                  <img src="img/charms/2.png" class="img-fluid two can_be_dragged" draggable="true" id="charm_img">
+
+                  <img src="img/charms/2.png" class="charm can_be_dragged" draggable="true" id="charm_img">
                   <!-- we need them to go under the passport when a phone screen -->
-                  <img src="img/name_tags/1.png" class="img-fluid three can_be_dragged" draggable="true" id="name_tag">
-                </div>
+                  <img src="img/name_tags/1.png" class="name_tag can_be_dragged" draggable="true" id="name_tag">
+           
         </div>
         <!-- / Grid End-->
         
 <!-- Sidebar-->
         <div class="sidebar col-xl-3 col-lg-4 order-lg-3">
 
-          <div class="sidebar-block px-3 px-lg-0 mr-lg-4"><a data-toggle="collapse" href="#colourFilterMenu" aria-expanded="false" aria-controls="colourFilterMenu" class="d-lg-none block-toggler">Filter by colour</a>
+          <div class="sidebar-block px-3 px-lg-0 mr-lg-4"><a data-toggle="collapse" href="#charmPicker" aria-expanded="false" aria-controls="charmPicker" class="d-lg-none block-toggler">Charm Picker</a>
             <!-- Size filter menu-->
 
+            <!-- delete id = rello at some point as does nothing -->
+            <div id="charmPicker" class="expand-lg collapse">
+              <h6 class="sidebar-heading d-none d-lg-block">Charm Picker</h6>
+ 
+              	<div class="test">
+              	  <div class="charm_thumbnails">
+                  	<img onclick ="change_charm(this.id)" id="1"  src="img/charms/1.png" >
+                  </div> 
+                  <div class="charm_thumbnails">
+                  	<img src="img/charms/2.png">
+                  </div> 
+                  <div class="charm_thumbnails">
+                  	<img src="img/charms/3.png">
+                  </div> 
+                  <div class="charm_thumbnails">
+                  	<img src="img/charms/4.png">
+                  </div> 
+                  <div class="charm_thumbnails">
+                  	<img src="img/charms/5.png">
+                  </div> 
+                  <div class="charm_thumbnails">
+                  	<img src="img/charms/6.png">
+                  </div> 
+                  <div class="charm_thumbnails">
+                  	<img src="img/charms/7.png">
+                  </div>
+                  <div class="charm_thumbnails">
+                  	<img src="img/charms/8.png">
+                  </div> 
+                  <div class="charm_thumbnails">
+                  	<img src="img/charms/9.png">
+                  </div> 
+                  <div class="charm_thumbnails">
+                  	<img src="img/charms/10.png">
+                  </div> 
+                  <div class="charm_thumbnails">
+                  	<img src="img/charms/11.png">
+                  </div> 
+                  <div class="charm_thumbnails">
+                  	<img src="img/charms/12.png">
+                  </div> 
+                  <div class="charm_thumbnails">
+                  	<img src="img/charms/13.png">
+                  </div>
+                  <div class="charm_thumbnails">
+                  	<img src="img/charms/14.png">
+                  </div> 
+                  <div class="charm_thumbnails">
+                  	<img src="img/charms/15.png">
+                  </div> 
+                  <div class="charm_thumbnails">
+                  	<img src="img/charms/16.png">
+                  </div> 
+                  <div class="charm_thumbnails">
+                  	<img src="img/charms/17.png">
+                  </div> 
+                  <div class="charm_thumbnails">
+                  	<img src="img/charms/18.png">
+                  </div>
+                  <div class="charm_thumbnails">
+                  	<img src="img/charms/19.png">
+                  </div>    
+                  <div class="charm_thumbnails">
+                  	<img src="img/charms/20.png">
+                  </div>    
+                  <div class="charm_thumbnails">
+                  	<img src="img/charms/21.png">
+                  </div>
+                  <div class="charm_thumbnails">
+                  	<img src="img/charms/22.png">
+                  </div>        
+                  <div class="charm_thumbnails">
+                  	<img src="img/charms/23.png">
+                  </div>    
+                  <div class="charm_thumbnails">
+                  	<img src="img/charms/24.png">
+                  </div>  
+                  <div class="charm_thumbnails">
+                  	<img src="img/charms/25.png">
+                  </div>  
+                  <div class="charm_thumbnails">
+                  	<img src="img/charms/26.png">
+                  </div>  
+                  <div class="charm_thumbnails">
+                  	<img src="img/charms/27.png">
+                  </div>     
+                  <div class="charm_thumbnails">
+                  	<img src="img/charms/28.png">
+                  </div>
+                  <div class="charm_thumbnails">
+                  	<img src="img/charms/29.png">
+                  </div>     
+                  <div class="charm_thumbnails">
+                  	<img src="img/charms/30.png">
+                  </div>                      
+                </div>    
 
-            <div id="colourFilterMenu" class="expand-lg collapse">
-              <h6 class="sidebar-heading d-none d-lg-block">Passport Colour </h6>
-              <form action="#" class="mt-4 mt-lg-0"> 
-              <div class="mt-4 mt-lg-0"> 
-                <ul class="list-inline mb-0 colours-wrapper" id="rello">
-
-                  <li class="list-inline-item" onclick ="change_passport('main_passport',this.value, this.id)" value="1" id="khaki">
-                    <label style="background-color: #efe7d5" data-allow-multiple class="btn-colour" id="clear_click"> </label>
-                  </li>
-
-                  <li class="list-inline-item" onclick ="change_passport('main_passport',this.value, this.id)" value="2" id="Beige">
-                    <label style="background-color: #998b6c" data-allow-multiple class="btn-colour" id="clear_click"> </label>
-                  </li>
-
-                  <li class="list-inline-item" onclick ="change_passport('main_passport',this.value, this.id)" value="3" id="lbrown">
-                    <label style="background-color: #8e4a12" data-allow-multiple class="btn-colour"> </label>
-                  </li>
-
-                  <li class="list-inline-item" onclick ="change_passport('main_passport',this.value, this.id)" value="4" id="brown">
-                    <label style="background-color: #a07b5d" data-allow-multiple class="btn-colour"> </label>
-                  </li>
-
-                  <li class="list-inline-item" onclick ="change_passport('main_passport',this.value, this.id)" value="5" id="dbrown">
-                    <label style="background-color: #564334" data-allow-multiple class="btn-colour"> </label>
-                  </li>
-
-                  <li class="list-inline-item" onclick ="change_passport('main_passport',this.value, this.id)" value="6" id="fgreen">
-                    <label style="background-color: #517a4a" data-allow-multiple class="btn-colour"> </label>
-                  </li>
-
-                  <li class="list-inline-item" onclick ="change_passport('main_passport',this.value, this.id)" value="7" id="dgreen">
-                    <label style="background-color: #253822" data-allow-multiple class="btn-colour"> </label>
-                  </li>
-
-                  <li class="list-inline-item" onclick ="change_passport('main_passport',this.value, this.id)" value="8" id="burgandy">
-                    <label style="background-color: #8e1c1c" data-allow-multiple class="btn-colour"> </label>
-                  </li>
-
-                  <li class="list-inline-item" onclick ="change_passport('main_passport',this.value, this.id)" value="9" id="dscarlett">
-                    <label style="background-color: #a83f5c" data-allow-multiple class="btn-colour"> </label>
-                  </li>
-
-                  <li class="list-inline-item" onclick ="change_passport('main_passport',this.value, this.id)" value="10" id="pink">
-                    <label style="background-color: #ed2f63" data-allow-multiple class="btn-colour"> </label>
-                  </li>
-
-                  <li class="list-inline-item" onclick ="change_passport('main_passport',this.value, this.id)" value="11" id="spink">
-                    <label style="background-color: #8e4848" data-allow-multiple class="btn-colour"> </label>
-                  </li>
-
-                  <li class="list-inline-item" onclick ="change_passport('main_passport',this.value, this.id)" value="12" id="rgold">
-                    <label style="background-color: #b4c4c4" data-allow-multiple class="btn-colour"> </label>
-                  </li>
-
-                  <li class="list-inline-item" onclick ="change_passport('main_passport',this.value, this.id)" value="14" id="dgrey">
-                    <label style="background-color: #303d3d" data-allow-multiple class="btn-colour"> </label>
-                  </li>
-
-                  <li class="list-inline-item" onclick ="change_passport('main_passport',this.value, this.id)" value="15" id="black">
-                    <label style="background-color: #000000" data-allow-multiple class="btn-colour"> </label>
-                  </li>
-
-            
-                  
-                </ul>
-              </div>
             </div>
           </div>
 
 
 
-          <div class="sidebar-block px-3 px-lg-0 mr-lg-4"> <a data-toggle="collapse" href="#sizeFilterMenu" aria-expanded="false" aria-controls="sizeFilterMenu" class="d-lg-none block-toggler">Filter by size</a>
-            <!-- Size filter menu-->
-            <div id="sizeFilterMenu" class="expand-lg collapse"> 
-              <h6 class="sidebar-heading d-none d-lg-block"></h6>Name Tag Size
-              <form action="#" class="mt-4 mt-lg-0">  
-                <div class="form-group mb-1">
-                  <div class="custom-control custom-radio">
-                    <input id="size0" type="radio" name="size" checked class="custom-control-input">
-                    <label for="size0" class="custom-control-label">Small</label>
-                  </div>
-                </div>
-                <div class="form-group mb-1">
-                  <div class="custom-control custom-radio">
-                    <input id="size1" type="radio" name="size" class="custom-control-input">
-                    <label for="size1" class="custom-control-label">Medium</label>
-                  </div>
-                </div>
-                <div class="form-group mb-1">
-                  <div class="custom-control custom-radio">
-                    <input id="size2" type="radio" name="size" class="custom-control-input">
-                    <label for="size2" class="custom-control-label">Large</label>
-                  </div>
-                </div>
-              </form>
-            </div>
+       
           </div>
           
         </div>
