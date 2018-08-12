@@ -39,6 +39,26 @@
 }
 
 
+.charm_two {
+  display: flex;
+  position: absolute;
+  left: 40%;
+  bottom: 65%;
+  height: auto;
+  width: 18%; 
+}
+
+
+.charm_three {
+  display: flex;
+  position: absolute;
+  left: 20%;
+  bottom: 65%;
+  height: auto;
+  width: 18%; 
+}
+
+
 .name_tag {
   display: flex;
   position: absolute;
@@ -51,28 +71,49 @@
 
 /*making the charm thumbnails pictures*/
 .charm_thumbnails img{
-
   height: auto;
   max-width: 68px;
  
 }
 
 .charm_thumbnails {
-
   display: flex;
   justify-content: flex-start;
   align-items: center;
   box-sizing: content-box;
-   border: 1px solid #e9ecef;
+  border: 1px solid #e9ecef;
 }
 
 .test{
   flex-wrap: wrap;
   display: flex;
   width: 100%;
-  max-height: 70vh;
+  max-height: 40vh;
   overflow: auto;
   justify-content: center;
 }
+
+
+.rotate_thumbnails {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: content-box;
+  border: 1px solid #e9ecef;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.rotate_thumbnails img{
+  height: auto;
+  max-width: 68px;
+}
+
+.rotate_thumbnails img:hover{
+  height: auto;
+  max-width: 68px;
+  border: 5px solid #e9ecef;
+}
+
 
 
