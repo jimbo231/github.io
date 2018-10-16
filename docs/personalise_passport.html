@@ -191,14 +191,37 @@
         <!-- Sidebar-->
         <div class="sidebar col-xl-3 col-lg-4 order-lg-1">
 
-        	<!-- name input box -->
-	 		<div class="sidebar-block px-3 px-lg-0 mr-lg-4">
+
+
+        	<!-- number of name tags -->
+    	 		<div class="sidebar-block px-3 px-lg-0 mr-lg-4">
+            <a data-toggle="collapse" href="#numberOfNameTags" aria-expanded="false" aria-controls="numberOfNameTags" class="d-lg-none block-toggler">Number of name tags</a>
+            <div id="numberOfNameTags" class="expand-lg collapse">
+              <h6 class="sidebar-heading d-none d-lg-block">Number of name tags</h6>
+                  <div class="nameTag_selector_radio">
+                        <input type="radio" checked="checked" name="nt" id="nt1" />
+                        <label for="nt1">1 </label>
+                        <input type="radio" name="nt" id="nt2" />
+                        <label for="nt2">2 </label>
+                        <input type="radio" name="nt" id="nt3" />
+                        <label for="nt3">3 </label>
+                    </div>
+              <h6 class="sidebar-sub_heading">Additional name tags are +50p</h6>      
+             </div>       
+          </div>
+
+
+
+          <!-- name input box -->
+          <div class="sidebar-block px-3 px-lg-0 mr-lg-4">
 	        	<form id="name_input" class="name_input" onkeyup="return name_on_passport()">
 	                <div class="input-group mb-3">
 	                  <input type="text" placeholder="Enter Name" class="form-control bg-transparent" id="user_name">
 	                </div>
 	              </form>
 	         </div>     	
+
+
 
           <div class="sidebar-block px-3 px-lg-0 mr-lg-4"><a data-toggle="collapse" href="#colourFilterMenu" aria-expanded="false" aria-controls="colourFilterMenu" class="d-lg-none block-toggler">Passport Colour</a>
             <!-- Size filter menu-->
@@ -326,148 +349,204 @@
 
 
 
-          <div class="sidebar-block px-3 px-lg-0 mr-lg-4"> <a data-toggle="collapse" href="#sizeFilterMenu" aria-expanded="false" aria-controls="sizeFilterMenu" class="d-lg-none block-toggler">Number of charms</a>
-            <!-- Size filter menu-->
-            <div id="sizeFilterMenu" class="expand-lg collapse"> 
-              <h6 class="sidebar-heading d-none d-lg-block">Number of charms</h6>
+          
 
-              <!-- <form action="#" class="mt-4 mt-lg-0">  
-                <div class="form-group mb-1">
-                  <div class="custom-control custom-radio">
-                    <input id="size0" type="radio" name="size" checked class="custom-control-input">
-                    <label for="size0" class="custom-control-label">Small</label>
-                  </div>
-                </div>
-                <div class="form-group mb-1">
-                  <div class="custom-control custom-radio">
-                    <input id="size1" type="radio" name="size" class="custom-control-input">
-                    <label for="size1" class="custom-control-label">Medium</label>
-                  </div>
-                </div>
-                <div class="form-group mb-1">
-                  <div class="custom-control custom-radio">
-                    <input id="size2" type="radio" name="size" class="custom-control-input">
-                    <label for="size2" class="custom-control-label">Large</label>
-                  </div>
-                </div>
-              </form> -->
-
-                <div class="charm_selector_radio">
-                    <input type="radio" checked="checked" name="rb" id="rb1" />
-                    <label for="rb1">1 </label>
-                    <input type="radio" name="rb" id="rb2" />
-                    <label for="rb2">2 </label>
-                    <input type="radio" name="rb" id="rb3" />
-                    <label for="rb3">3 </label>
-                    <input type="radio" name="rb" id="rb4" />
-                    <label for="rb4">4 </label>
-                    <input type="radio" name="rb" id="rb5" />
-                    <label for="rb5">5 </label>
-                </div>
-
-
-            </div>
-
-
-
-
-
-
-
-          </div>
         </div>
         <!-- /Sidebar end-->
 
+
+
+<!-- ---------------------------------------------------------------------------------------------------------- -->
+<!--                                                  Javascript AREA                                           -->
+<!-- ---------------------------------------------------------------------------------------------------------- -->
+
         <!-- should put this all in Jquery file -->
+
+
+<!--------------------------------------------------->
+<!--           Changing Passport Colour            -->
+<!--------------------------------------------------->
+
         <script type="text/javascript">
-          function change_passport(imgid,newimg,list_id){
-            document.getElementById(imgid).src = "img/passport_colours/" + newimg +".png";
-          }
+              function change_passport(imgid,newimg,list_id){
+                document.getElementById(imgid).src = "img/passport_colours/" + newimg +".png";
+              }
         </script>
 
 
-        <script type="text/javascript">
-          function change_name_tag(imgid,newimg,list_id){
-            document.getElementById(imgid).src = "img/name_tags/" + newimg +".png";
-          }
-        </script>
+<!--------------------------------------------------->
+<!--           Changing name_tag Colour            -->
+<!--------------------------------------------------->        
 
         <script type="text/javascript">
-          function change_charm(img_id){
-            document.getElementById('charm_img').src = "img/charms/" + img_id +".png";
-          }
-
+              function change_name_tag(imgid,newimg,list_id){
+                document.getElementById(imgid).src = "img/name_tags/" + newimg +".png";
+              }
         </script>
 
-        <!-- using a button to rotate the charm -->
-        <script type="text/javascript">
-        	var angle = 0;
-
-			function rotate_charm_right() {
-			    angle += 15;
-			    document.getElementById('charm_img').style = "transform: rotate(" + angle + "deg)";
-		}
-
-		function rotate_charm_left() {
-			    angle -= 15;
-			    document.getElementById('charm_img').style = "transform: rotate(" + angle + "deg)";
-		}
-        </script>
+<!--------------------------------------------------->
+<!--           Changing Charm Selected             -->
+<!---------------------------------------------------> 
 
         <script type="text/javascript">
-
-        	function change_number_of_charms() {
-
-			var number_of_charms = document.getElementById("charm_number").value;	
-
-
-
-			if (number_of_charms == "1") {
-				document.getElementById('charm_img').style = "opacity: 1";
-				document.getElementById('charm_img_two').style = "opacity: 0";
-				document.getElementById('charm_img_three').style = "opacity: 0";
-			}
-			else if (number_of_charms == "2") {
-				document.getElementById('charm_img').style = "opacity: 1";
-				document.getElementById('charm_img_two').style = "opacity: 1";
-				document.getElementById('charm_img_three').style = "opacity: 0";
-			}
-			else if (number_of_charms == "3") {
-				document.getElementById('charm_img').style = "opacity: 1";
-				document.getElementById('charm_img_two').style = "opacity: 1";
-				document.getElementById('charm_img_three').style = "opacity: 1";
-			}
-			else {
-				document.getElementById('charm_img').style = "opacity: 0";
-				document.getElementById('charm_img_two').style = "opacity: 0";
-				document.getElementById('charm_img_three').style = "opacity: 0";
-			}
-						// return false;
-        	}
-
-        	// changing the name on the passport cover
-        	function  name_on_passport () {
-						var user_name = document.getElementById("user_name").value;		
-						document.getElementById("name_tag_text").innerHTML = user_name
-						return false;
-					}
-			// Making the roate symbols visible 
-			// !!!!!!!!! MAY have a problem with clicking the other charms when not there - make their z-index under the passport!!!! (nice)
-			function  charm_one_rotate_symbols_visible () {
-						document.getElementById('charm_one_rotate_left').style = "opacity: 1"
-						document.getElementById('charm_one_rotate_right').style = "opacity: 1"
-
-						setTimeout(charm_one_rotate_symbols_not_visible, 3000)
-
-					}	
-
-			function  charm_one_rotate_symbols_not_visible () {
-						document.getElementById('charm_one_rotate_left').style = "opacity: 0"
-						document.getElementById('charm_one_rotate_right').style = "opacity: 0"
-
-					}				
-
+              function change_charm(img_id){
+                document.getElementById(charm_to_amend).src = "img/charms/" + img_id +".png";
+              }
         </script>
+
+
+<!--------------------------------------------------->
+<!--           Rotating selected Charm             -->
+<!---------------------------------------------------> 
+
+        <script type="text/javascript">
+              	var angle = 0;
+
+      			   function rotate_charm_right() {
+      			    angle += 15;
+      			    document.getElementById(charm_to_amend).style = "transform: rotate(" + angle + "deg)";
+      		     }
+
+      		     function rotate_charm_left() {
+      			    angle -= 15;
+      			    document.getElementById(charm_to_amend).style = "transform: rotate(" + angle + "deg)";
+      		     }
+        </script>
+
+
+
+<!--------------------------------------------------->
+<!--        Changing the number of charms          -->
+<!---------------------------------------------------> 
+
+
+
+<script type="text/javascript">
+
+      function visible_charms_function() {
+        if (document.getElementById('rb1').checked){
+          document.getElementById('charm_img_one').style = "z-index: 1";
+          document.getElementById('charm_img_two').style = "z-index: -1";
+          document.getElementById('charm_img_three').style = "z-index: -1";
+          document.getElementById('charm_img_four').style = "z-index: -1";
+          document.getElementById('charm_img_five').style = "z-index: -1";
+        }
+        else if (document.getElementById('rb2').checked){
+          document.getElementById('charm_img_one').style = "z-index: 1";
+          document.getElementById('charm_img_two').style = "z-index: 1";
+          document.getElementById('charm_img_three').style = "z-index: -1";
+          document.getElementById('charm_img_four').style = "z-index: -1";
+          document.getElementById('charm_img_five').style = "z-index: -1";
+        }
+        else if (document.getElementById('rb3').checked){
+          document.getElementById('charm_img_one').style = "z-index: 1";
+          document.getElementById('charm_img_two').style = "z-index: 1";
+          document.getElementById('charm_img_three').style = "z-index: 1";
+          document.getElementById('charm_img_four').style = "z-index: -1";
+          document.getElementById('charm_img_five').style = "z-index: -1";
+        }
+        else if (document.getElementById('rb4').checked){
+          document.getElementById('charm_img_one').style = "z-index: 1";
+          document.getElementById('charm_img_two').style = "z-index: 1";
+          document.getElementById('charm_img_three').style = "z-index: 1";
+          document.getElementById('charm_img_four').style = "z-index: 1";
+          document.getElementById('charm_img_five').style = "z-index: -1";
+        }
+        else if (document.getElementById('rb5').checked){
+          document.getElementById('charm_img_one').style = "z-index: 1";
+          document.getElementById('charm_img_two').style = "z-index: 1";
+          document.getElementById('charm_img_three').style = "z-index: 1";
+          document.getElementById('charm_img_four').style = "z-index: 1";
+          document.getElementById('charm_img_five').style = "z-index: 1";
+        }
+
+      }  
+
+</script>
+
+
+
+<!--------------------------------------------------->
+<!--        Which charm is selected??              -->
+<!---------------------------------------------------> 
+
+<script type="text/javascript">
+  
+function selected_charm_one () {
+          charm_to_amend = "charm_img_one";
+          charm_number_clicked = "1";
+          document.getElementById("charm_number_text").innerHTML = "Charm " + charm_number_clicked + " Selected"
+          return false;
+}
+
+function selected_charm_two () {
+          charm_to_amend = "charm_img_two";
+          charm_number_clicked = "2";
+          document.getElementById("charm_number_text").innerHTML = "Charm " + charm_number_clicked + " Selected"
+          return false;
+}
+
+function selected_charm_three () {
+          charm_to_amend = "charm_img_three";
+          charm_number_clicked = "3";
+          document.getElementById("charm_number_text").innerHTML = "Charm " + charm_number_clicked + " Selected"
+          return false;
+}
+
+function selected_charm_four () {
+          charm_to_amend = "charm_img_four";
+          charm_number_clicked = "4";
+          document.getElementById("charm_number_text").innerHTML = "Charm " + charm_number_clicked + " Selected"
+          return false;
+}
+
+function selected_charm_five () {
+          charm_to_amend = "charm_img_five";
+          charm_number_clicked = "5";
+          document.getElementById("charm_number_text").innerHTML = "Charm " + charm_number_clicked + " Selected"
+          return false;
+}
+
+
+
+</script>
+
+
+<!-- old version -->
+
+
+
+<!--------------------------------------------------->
+<!--        Changing name on singular tag          -->
+<!---------------------------------------------------> 
+
+        <script type="text/javascript">
+            	function  name_on_passport () {
+      						var user_name = document.getElementById("user_name").value;		
+      						document.getElementById("name_tag_text").innerHTML = user_name
+      						return false;
+    					}
+        </script>
+
+
+
+<!-- ---------------------------------------------------------------------------------------------------------- -->
+<!--                                                  Javascript End                                            -->
+<!-- ---------------------------------------------------------------------------------------------------------- -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -480,10 +559,7 @@
         <div class="col-xl-6 col-lg-8 order-lg-2">
           <!-- not sure we want this as a row product -->
             <div class="center_main_image">
-                  <p class="charm_selected">Charm <script type="text/javascript">
-                                                           document.write(number_of_charms)
-                                                  </script>
-                  </p>
+                  <p class="charm_selected" id="charm_number_text"> Please select charm </p>
             </div>
             <!-- product-->
              <div class="center_main_image">
@@ -502,17 +578,24 @@
 
 
 				<!-- <img src="img/charms/2.png" class="rotate_charm_class charm can_be_dragged" draggable="true" id="charm_img"> -->
-				  <img src="img/charms/2.png" class="rotate_charm_class charm_one can_be_dragged" draggable = "true" id="charm_img">
-                  <img src="img/charms/3.png" class="rotate_charm_class charm_two can_be_dragged" draggable="true" id="charm_img_two">
-                  <img src="img/charms/4.png" class="rotate_charm_class charm_three can_be_dragged" draggable="true" id="charm_img_three">
-                  <!-- we need them to go under the passport when a phone screen -->
-                  <!-- <img src="img/name_tags/1.png" class="name_tag can_be_dragged" draggable="true" id="name_tag"> -->
+	          <img src="img/charms/1.png" class="rotate_charm_class charm_one can_be_dragged" draggable = "true" id="charm_img_one" onmousedown="selected_charm_one()">
+            <img src="img/charms/2.png" class="rotate_charm_class charm_two can_be_dragged" draggable="true" id="charm_img_two" onmousedown="selected_charm_two()">
+            <img src="img/charms/3.png" class="rotate_charm_class charm_three can_be_dragged" draggable="true" id="charm_img_three" onmousedown="selected_charm_three()">
+            <img src="img/charms/4.png" class="rotate_charm_class charm_four can_be_dragged" draggable="true" id="charm_img_four" onmousedown="selected_charm_four()">
+            <img src="img/charms/5.png" class="rotate_charm_class charm_five can_be_dragged" draggable="true" id="charm_img_five" onmousedown="selected_charm_five()">
+            <!-- we need them to go under the passport when a phone screen -->
+            <!-- <img src="img/name_tags/1.png" class="name_tag can_be_dragged" draggable="true" id="name_tag"> -->
 
      			<!-- name tag inside the div - so we can move all elements inside the tag -->
           <div class="name_tag_div can_be_dragged" draggable = "true" id="name_tag">
 	    			<p class="name_tag" id="name_tag_text"> Name </p>
 	    			<img src="img/name_tags/1.png" class="name_tag_image" id="name_tag_image">
 	    		</div>
+
+          <!-- <div class="name_tag_div_two can_be_dragged" draggable = "true" id="name_tag_two">
+            <p class="name_tag_two" id="name_tag_text_two"> Name </p>
+            <img src="img/name_tags/1.png" class="name_tag_image_two" id="name_tag_image_two">
+          </div> -->
 				
         <div class="center_main_image">
           <button
@@ -541,30 +624,34 @@
         
 <!-- Sidebar-->
         <div class="sidebar col-xl-3 col-lg-4 order-lg-3">
-        
-         <!-- Rotate Charm buttons -->
-		<div class="sidebar-block px-3 px-lg-0 mr-lg-4"><a data-toggle="collapse" href="#rotateCharm" aria-expanded="false" aria-controls="rotateCharm" class="d-lg-none block-toggler">Rotate Charm</a>
+
+
+
+    <div class="sidebar-block px-3 px-lg-0 mr-lg-4"> <a data-toggle="collapse" href="#sizeFilterMenu" aria-expanded="false" aria-controls="sizeFilterMenu" class="d-lg-none block-toggler">Number of charms</a>
             <!-- Size filter menu-->
+            <div id="sizeFilterMenu" class="expand-lg collapse"> 
+              <h6 class="sidebar-heading d-none d-lg-block">Number of charms</h6>
 
-            <!-- delete id = rello at some point as does nothing -->
-            <div id="rotateCharm" class="expand-lg collapse">
-              <h6 class="sidebar-heading d-none d-lg-block">Rotate Charm</h6>
- 
-              	<div class="test">
-              	  <div class="rotate_thumbnails">
-                  	<img onclick ="rotate_charm_left()"  src="img/rotate_left.png" >
-                  </div>
-                  <div class="rotate_thumbnails">
-                  	<img onclick ="rotate_charm_right()" onkeydown="rotate_charm_right()"  src="img/rotate_right.png" >
-                  </div>                    
-                </div>    
 
+                <div class="charm_selector_radio">
+                    <input type="radio" name="rb" id="rb1" onclick="visible_charms_function()" />
+                    <label for="rb1">1 </label>
+                    <input type="radio" name="rb" id="rb2" onclick="visible_charms_function()" />
+                    <label for="rb2">2 </label>
+                    <input type="radio" name="rb" id="rb3" onclick="visible_charms_function()" />
+                    <label for="rb3">3 </label>
+                    <input type="radio" name="rb" id="rb4" onclick="visible_charms_function()" />
+                    <label for="rb4">4 </label>
+                    <input type="radio" checked="checked"  name="rb" id="rb5" onclick="visible_charms_function()" />
+                    <label for="rb5">5 </label>
+                </div>
+              <h6 class="sidebar-sub_heading">Each additional charm is +50p</h6> 
             </div>
-          </div>
+          </div>      
+        
 
-
-
-           <div class="sidebar-block px-3 px-lg-0 mr-lg-4"><a data-toggle="collapse" href="#numberOfCharmeys" aria-expanded="false" aria-controls="numberOfCharmeys" class="d-lg-none block-toggler">Number of Charms</a>
+<!-- Previous number of charms button -->
+<!--            <div class="sidebar-block px-3 px-lg-0 mr-lg-4"><a data-toggle="collapse" href="#numberOfCharmeys" aria-expanded="false" aria-controls="numberOfCharmeys" class="d-lg-none block-toggler">Number of Charms</a>
 
            	<div id="numberOfCharmeys" class="expand-lg collapse">
 
@@ -576,7 +663,7 @@
 	                </div>
 	              </form>
 	        </div>      
-	   	 </div>     	
+	   	 </div> -->     	
 
 
           <div class="sidebar-block px-3 px-lg-0 mr-lg-4"><a data-toggle="collapse" href="#charmPicker" aria-expanded="false" aria-controls="charmPicker" class="d-lg-none block-toggler">Charm Picker</a>
@@ -685,10 +772,28 @@
 
          
 
+      <!-- Rotate Charm buttons -->
+          <div class="sidebar-block px-3 px-lg-0 mr-lg-4"><a data-toggle="collapse" href="#rotateCharm" aria-expanded="false" aria-controls="rotateCharm" class="d-lg-none block-toggler">Rotate Charm</a>
+                  <!-- Size filter menu-->
 
-
+                  <!-- delete id = rello at some point as does nothing -->
+                  <div id="rotateCharm" class="expand-lg collapse">
+                    <h6 class="sidebar-heading d-none d-lg-block">Rotate Charm</h6>
        
-          </div>
+                      <div class="test">
+                        <div class="rotate_thumbnails">
+                          <img onclick ="rotate_charm_left()"  src="img/rotate_left.png" >
+                        </div>
+                        <div class="rotate_thumbnails">
+                          <img onclick ="rotate_charm_right()" onkeydown="rotate_charm_right()"  src="img/rotate_right.png" >
+                        </div>                    
+                      </div>    
+
+                  </div>
+                </div>
+
+             
+                </div>
           
         </div>
         <!-- /Sidebar end-->
