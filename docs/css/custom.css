@@ -12,7 +12,7 @@
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;*/
-  margin-bottom: 10%;
+  margin-bottom: 2%;
   height: auto;
   width: 80%; 
 }
@@ -29,7 +29,7 @@
 /*Need the charm image and the name tag to be 'absolute' so that there is no added border below it*/
 /*Having the width as a % keeps it the same when the screen is a differnt size*/
 
-.charm {
+.charm_one {
   display: flex;
   position: absolute;
   left: 60%;
@@ -59,14 +59,7 @@
 }
 
 
-.name_tag {
-  display: flex;
-  position: absolute;
-  left: 20%;
-  bottom: 30%;
-  height: auto;
-  width: 55%; 
-}
+
 
 
 /*making the charm thumbnails pictures*/
@@ -115,5 +108,198 @@
   border: 5px solid #e9ecef;
 }
 
+
+/*Name tag styles*/
+.name_tag_div {
+  position: relative;
+  left: 20%;
+  bottom: 30%;
+  align-content: center;
+  width: 55%;
+
+  display: -webkit-flex; /* Safari */
+    -webkit-align-items: center; /* Safari 7.0+ */
+    display: flex;
+    align-items: center;
+}
+
+.name_tag {
+  text-shadow: 0px 1px 1px #4d4d4d;
+  color: #222;
+  font: 30px 'LeagueGothicRegular';
+  z-index: 10;
+  text-transform: uppercase;
+
+  position: relative;
+  margin-bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+.name_tag_image {
+  position: absolute;
+  z-index: 1;
+  height: auto;
+  width: 100%;
+}
+
+/*changes the size of the text when the screen size is smaller - so it fits in the name_tag image*/
+@media only screen and (max-width: 600px) {
+    .name_tag {
+        text-shadow: 0px 1px 1px #4d4d4d;
+        color: #222;
+        font: 20px 'LeagueGothicRegular';
+        z-index: 10;
+        text-transform: uppercase;
+
+        position: relative;
+        margin-bottom: 0;
+        width: 100%;
+        text-align: center;
+    }
+}
+/*End name tag styles*/
+
+
+
+
+/*for some reason when moving a div on a COMPUTER screen you need an invisible text box over everything*/
+.text_over_images {
+  position: absolute;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+}
+
+.charm_selected {
+  text-shadow: 0px 1px 1px #4d4d4d;
+  color: #222;
+  font: 20px 'LeagueGothicRegular';
+  z-index: 10;
+  text-align: center;
+}
+
+.charm_selected_number {
+  text-shadow: 0px 1px 1px #4d4d4d;
+  color: #222;
+  font: 40px 'LeagueGothicRegular';
+  z-index: 10;
+  text-align: center;
+}
+
+/* Making the add to cart button look nice*/
+
+
+
+.add_to_cart_1{
+  background:#1AAB8A;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:60px;
+  font-size:1.6em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+  margin-bottom: 10%;
+}
+.add_to_cart_1:hover{
+  background:#fff;
+  color:#1AAB8A;
+}
+.add_to_cart_1:before,.add_to_cart_1:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #1AAB8A;
+  transition:400ms ease all;
+}
+.add_to_cart_1:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.add_to_cart_1:hover:before,.add_to_cart_1:hover:after{
+  width:100%;
+  transition:800ms ease all;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*animated select number of charms button*/
+
+
+
+.charm_selector_radio input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.charm_selector_radio label {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 10px;
+  line-height: 36px;
+  cursor: pointer;
+}
+.charm_selector_radio label::before {
+  content: " ";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #170b59;
+  border-radius: 4px;
+  z-index: -1;
+}
+.charm_selector_radio input[type="radio"] + label::before {
+  border-radius: 18px;
+}
+
+
+/* Checked */
+.charm_selector_radio input[type="radio"]:checked + label {
+  padding-left: 10px;
+  color: #fff;
+}
+
+.charm_selector_radio input[type="radio"]:checked + label::before {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #170b59;
+}
+/* Transition */
+.charm_selector_radio label,
+.charm_selector_radio label::before {
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+}
 
 
