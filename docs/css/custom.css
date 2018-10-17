@@ -33,8 +33,8 @@
 .charm_one {
   display: flex;
   position: absolute;
-  left: 60%;
-  bottom: 65%;
+  left: 41%;
+  bottom: 76%;
   height: auto;
   width: 18%; 
 }
@@ -43,8 +43,8 @@
 .charm_two {
   display: flex;
   position: absolute;
-  left: 40%;
-  bottom: 65%;
+  left: 62%;
+  bottom: 30%;
   height: auto;
   width: 18%; 
 }
@@ -53,8 +53,8 @@
 .charm_three {
   display: flex;
   position: absolute;
-  left: 20%;
-  bottom: 65%;
+  left: 40%;
+  bottom: 45%;
   height: auto;
   width: 18%; 
 }
@@ -63,18 +63,20 @@
   display: flex;
   position: absolute;
   left: 40%;
-  bottom: 35%;
+  bottom: 45%;
   height: auto;
   width: 18%; 
+  z-index: -1;
 }
 
 .charm_five {
   display: flex;
   position: absolute;
   left: 20%;
-  bottom: 35%;
+  bottom: 45%;
   height: auto;
-  width: 18%; 
+  width: 18%;
+  z-index: -1;
 }
 
 
@@ -131,10 +133,10 @@
 /*Name tag styles*/
 .name_tag_div {
   position: relative;
-  left: 20%;
-  bottom: 13%;
+  left: 26%;
+  bottom: 50%;
   align-content: center;
-  width: 55%;
+  width: 45%;
 
   display: -webkit-flex; /* Safari */
     -webkit-align-items: center; /* Safari 7.0+ */
@@ -155,7 +157,7 @@
   color: #333;
   text-shadow: -1px -1px 0px rgba(255, 255, 255, 0.3), 1px 1px 0px rgba(0, 0, 0, 0.8);
   opacity: 0.5;
-  font: 30px 'Museo700';
+  font: 26px 'Museo700';
 }
 .name_tag_image {
   position: absolute;
@@ -171,10 +173,10 @@
 /*Name tag styles*/
 .name_tag_div_two {
   position: relative;
-  left: 30%;
-  bottom: 13%;
+  left: 18%;
+  bottom: 47%;
   align-content: center;
-  width: 30%;
+  width: 63%;
 
   display: -webkit-flex; /* Safari */
     -webkit-align-items: center; /* Safari 7.0+ */
@@ -195,9 +197,87 @@
   color: #333;
   text-shadow: -1px -1px 0px rgba(255, 255, 255, 0.3), 1px 1px 0px rgba(0, 0, 0, 0.8);
   opacity: 0.5;
-  font: 30px 'Museo700';
+  font: 26px 'Museo700';
 }
 .name_tag_image_two {
+  position: absolute;
+  z-index: 1;
+  height: 120%;
+  width: 100%;
+}
+
+
+
+
+/*Name tag styles*/
+.name_tag_div_three {
+  position: relative;
+  left: 23%;
+  bottom: 44%;
+  align-content: center;
+  width: 55%;
+
+  display: -webkit-flex; /* Safari */
+    -webkit-align-items: center; /* Safari 7.0+ */
+    display: flex;
+    align-items: center;
+}
+
+/* making an embossed effect*/
+.name_tag_three {
+  text-transform: uppercase;
+  z-index: 10;
+  position: relative;
+  margin-bottom: 0;
+  width: 100%;
+  text-align: center;
+  /*text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+  color: #9c8468;*/
+  color: #333;
+  text-shadow: -1px -1px 0px rgba(255, 255, 255, 0.3), 1px 1px 0px rgba(0, 0, 0, 0.8);
+  opacity: 0.5;
+  font: 26px 'Museo700';
+}
+.name_tag_image_three {
+  position: absolute;
+  z-index: 1;
+  height: 120%;
+  width: 100%;
+}
+
+
+
+
+/*Name tag styles*/
+.name_tag_div_four {
+  position: relative;
+  left: 20%;
+  bottom: 20%;
+  align-content: center;
+  width: 35%;
+
+  display: -webkit-flex; /* Safari */
+    -webkit-align-items: center; /* Safari 7.0+ */
+    display: flex;
+    align-items: center;
+}
+
+/* making an embossed effect*/
+.name_tag_four {
+  text-transform: uppercase;
+  z-index: 10;
+  position: relative;
+  margin-bottom: 0;
+  width: 100%;
+  text-align: center;
+  /*text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+  color: #9c8468;*/
+  color: #333;
+  text-shadow: -1px -1px 0px rgba(255, 255, 255, 0.3), 1px 1px 0px rgba(0, 0, 0, 0.8);
+  opacity: 0.5;
+  font: 26px 'Museo700';
+}
+.name_tag_image_four {
   position: absolute;
   z-index: 1;
   height: 120%;
@@ -255,13 +335,21 @@
   text-align: center;
 }
 
-.charm_selected_number {
+
+.nameTag_selected {
   text-shadow: 0px 1px 1px #4d4d4d;
   color: #222;
-  font: 40px 'LeagueGothicRegular';
+  font: 20px 'LeagueGothicRegular';
   z-index: 10;
   text-align: center;
 }
+
+
+
+
+
+
+
 
 /* Making the add to cart button look nice*/
 
