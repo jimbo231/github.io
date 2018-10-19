@@ -33,49 +33,49 @@
 .charm_one {
   display: flex;
   position: absolute;
-  left: 41%;
-  bottom: 75%;
+  left: 28%;
+  bottom: 68%;
   height: auto;
-  width: 18%; 
+  width: 43%; 
 }
 
 
 .charm_two {
   display: flex;
   position: absolute;
-  left: 62%;
-  bottom: 25%;
+  left: 50%;
+  bottom: 20%;
   height: auto;
-  width: 18%; 
+  width: 43%; 
 }
 
 
 .charm_three {
   display: flex;
   position: absolute;
-  left: 40%;
-  bottom: 45%;
+  left: 18%;
+  bottom: 25%;
   height: auto;
-  width: 18%; 
+  width: 43%; 
 }
 
 .charm_four {
   display: flex;
   position: absolute;
-  left: 40%;
-  bottom: 45%;
+  left: 50%;
+  bottom: 40%;
   height: auto;
-  width: 18%; 
+  width: 43%; 
   z-index: -1;
 }
 
 .charm_five {
   display: flex;
   position: absolute;
-  left: 20%;
-  bottom: 45%;
+  left: 10%;
+  bottom: 40%;
   height: auto;
-  width: 18%;
+  width: 43%;
   z-index: -1;
 }
 
@@ -84,9 +84,31 @@
 
 
 /*making the charm thumbnails pictures*/
+
+.thumbnail_test {
+  position: relative;
+  overflow: hidden;
+}
+.thumbnail_test img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width:  100%;
+  height: auto;
+  -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+}
+
+
+
+
+
+
 .charm_thumbnails img{
   height: auto;
   max-width: 68px;
+
  
 }
 
