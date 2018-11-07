@@ -1,5 +1,14 @@
 /* your styles go here */
 
+.home_page_grey {
+  background: #909fa0;
+}
+
+
+
+
+
+
 .personalise-image {
   position: relative;
   /*
@@ -149,7 +158,29 @@
   height: auto;
   max-width: 68px;
   border: 5px solid #e9ecef;
+}             
+
+
+
+/* aligning the pins for each name tag - so it is not distorted by the change in width*/
+
+
+.pin_image_left {
+  position: absolute;
+  z-index: 4;
+  width: 20px;
+  height: auto;
+  left: 10px;
 }
+
+.pin_image_right {
+  position: absolute;
+  z-index: 4; 
+  width: 20px;
+  height: auto;
+  right: 10px;
+}
+
 
 
 /*Name tag styles*/
@@ -413,6 +444,44 @@
   width:100%;
   transition:800ms ease all;}
 
+
+
+/* Making the add to cart button look nice*/
+
+.tutorial_button{
+  background:#1AAB8A;
+  color:#fff;
+  border:none;
+  bottom: 0%;
+  height:50px;
+  font-size:1.6em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+.tutorial_button:hover{
+  background:#fff;
+  color:#1AAB8A;
+}
+.tutorial_button:before,.tutorial_button:after{
+  content:'';
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #1AAB8A;
+  transition:400ms ease all;
+}
+.tutorial_button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.tutorial_button:hover:before,.tutorial_button:hover:after{
+  width:100%;
+  transition:800ms ease all;}
 
 
 

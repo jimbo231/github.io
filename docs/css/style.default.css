@@ -11853,9 +11853,9 @@ a.text-gray-900:hover, a.text-gray-900:focus {
 * ===================================================
 */
 .top-bar {
-  color: #495057;
-  background: #f8f9fa;
-  padding: 1rem;
+  /*color: #495057;
+  background: #f8f9fa;*/
+  /*padding: 1rem;*/
   font-weight: 300;
 }
 

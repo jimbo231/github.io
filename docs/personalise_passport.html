@@ -43,31 +43,13 @@
 <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" type="text/css" rel="stylesheet" />
 
 <!-- setting default number of charms so it can be shown it text on load -->
-
-
-
   </head>
   <body>
+
     <header class="header">
-      <!-- Top Bar-->
+      <!-- Top Bar - need for fixed scroll for some reason-->
       <div class="top-bar">
-        <div class="container-fluid">
-          <div class="row d-flex align-items-center">
-            <div class="col-sm-7 d-none d-sm-block">
-              <ul class="list-inline mb-0">
-                <li class="list-inline-item pr-3 mr-0">
-                  <!-- <svg class="svg-icon mr-2">
-                    <use xlink:href="#calls-1"> </use>
-                  </svg> -->
-                </li>
-                <li class="list-inline-item px-3 border-left d-none d-lg-inline-block">Free shipping on domestic orders</li>
-              </ul>
-            </div>
-            
-          </div>
-        </div>
       </div>
-      <!-- Top Bar End-->
       <!-- Navbar-->
       <nav class="navbar navbar-expand-lg navbar-sticky navbar-light bg-white bg-fixed-white">
         <div class="container-fluid">  
@@ -76,90 +58,28 @@
           <!-- Navbar Collapse -->
           <div id="navbarCollapse" class="collapse navbar-collapse">
             <ul class="navbar-nav mx-auto">
-              <li class="nav-item"><a href="index.html" class="nav-link active">Home</a>
-              </li>
-              <li class="nav-item"><a href="gallery.html" class="nav-link active">Gallery</a>
-              </li>
+              <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+              <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+              
               <!-- Multi level dropdown    -->
               <li class="nav-item dropdown"><a id="navbarDropdownMenuLink" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link">Personalise<i class="fa fa-angle-down"></i></a>
                 <ul aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">
-                  <li><a href="#" class="dropdown-item">Passport Holder</a></li>
+                  <li><a href="personalise_passport.html" class="dropdown-item">Passport Holder</a></li>
                   <li><a href="#" class="dropdown-item">Wallets</a></li>
-                  <li class="dropdown-submenu"><a id="navbarDropdownMenuLink2" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item">Purses<i class="fa fa-angle-down ml-2"></i></a>
-                    <ul aria-labelledby="navbarDropdownMenuLink2" class="dropdown-menu">
-                      <li><a href="#" class="dropdown-item">Action</a></li>
-                      <li class="dropdown-submenu"><a id="navbarDropdownMenuLink3" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item">
-                           
-                          Another action<i class="fa fa-angle-down ml-2"></i></a>
-                        <ul aria-labelledby="navbarDropdownMenuLink3" class="dropdown-menu">
-                          <li><a href="#" class="dropdown-item">Action</a></li>
-                          <li><a href="#" class="dropdown-item">Action</a></li>
-                          <li><a href="#" class="dropdown-item">Action</a></li>
-                          <li><a href="#" class="dropdown-item">Action</a></li>
-                        </ul>
-                      </li>
-                      <li><a href="#" class="dropdown-item">Something else here</a></li>
-                    </ul>
-                  </li>
+                  <li><a href="#" class="dropdown-item">Purses</a></li>
                 </ul>
               </li>
               <!-- Multi level dropdown end-->
-              <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a>
-              </li>
-              <!-- <li class="nav-item"><a id="docsDropdownMenuLink" href="index.html" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link ">
-                   
-                  Docs<i class="fa fa-angle-down"></i></a>
-                <div aria-labelledby="docsDropdownMenuLink" class="dropdown-menu dropdown-menu-right">
-                  <h6 class="dropdown-header font-weight-normal">Documentation</h6><a href="docs-introduction.html" class="dropdown-item">Introduction </a><a href="docs-directory-structure.html" class="dropdown-item">Directory structure </a><a href="docs-gulp.html" class="dropdown-item">Gulp </a><a href="docs-customizing-css.html" class="dropdown-item">Customizing CSS </a><a href="docs-changelog.html" class="dropdown-item">Changelog </a>
-                  <div class="dropdown-divider"></div>
-                  <h6 class="dropdown-header font-weight-normal">Components</h6><a href="components-bootstrap.html" class="dropdown-item">Bootstrap </a><a href="components-sell.html" class="dropdown-item">Theme </a>
-                </div>
-              </li> -->
+              <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li> 
             </ul>
-            <div class="right-col d-flex align-items-center justify-content-between justify-content-lg-end my-3 my-lg-0">
-              <!-- Search Button-->
-              <div data-toggle="search" class="nav-item navbar-icon-link">
-                <svg class="svg-icon">
-                  <use xlink:href="#search-1"> </use>
-                </svg>
-              </div>
-
-              <!-- Cart Dropdown-->
-              <div class="nav-item dropdown">
-                  <!-- <i class="fa fa-shopping-cart"></i> -->
-                  <button type="button" class="btn btn-default btn-sm">
-                           <span class="glyphicon glyphicon-shopping-cart snipcart-checkout"></span> <a href="#" class="snipcart-checkout">Checkout <i class="fa fa-shopping-cart"></i></a>
-                  </button>
-              </div>
-            </div>
           </div>
         </div>
       </nav>
       <!-- /Navbar -->
-      
-      <!-- Fullscreen search area-->
-      <div class="search-area-wrapper">
-        <div class="search-area d-flex align-items-center justify-content-center">
-          <div class="close-btn">
-            <svg class="svg-icon svg-icon-light w-3rem h-3rem">
-              <use xlink:href="#close-1"> </use>
-            </svg>
-          </div>
-          <form action="#" class="search-area-form">
-            <div class="form-group position-relative">
-              <input type="search" name="search" id="search" placeholder="What are you looking for?" class="search-area-input">
-              <button type="submit" class="search-area-button">
-                <svg class="svg-icon">
-                  <use xlink:href="#search-1"> </use>
-                </svg>
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-      <!-- /Fullscreen search area-->
-      
     </header>
+
+
+
     <!-- Hero Section-->
     <section class="hero">
       <div class="container">
@@ -171,7 +91,14 @@
         <!-- Hero Content-->
         <div class="hero-content pb-5 text-center">
           <h1 class="hero-heading">Personalise</h1>
-          <h6 class="instructions">How does it work? Simply select the number of charms and name tags you want. Choose the colour of the passport. To change a charm or the colour of a name tag select which one you want to change and then change from the dropdowns. To rotate, click on the item you want to rotate and then click the rotate buttons. Finally, click and drag any item on the passport to the position you desire.</h6>
+
+        <div class="center_main_image">
+          <button class="tutorial_button">
+                Tutorial
+          </button>
+        </div>
+
+          <!-- <h6 class="instructions">1.) Pick passport colour - use colour pallet <br> 2.) Select number of charms & name tags you want <br> 3.) Choose charms - select which charm to change and then select what to change it to from the charm picker <br> 4.) Choose name tag colours - select which name tag to change and then select which colour to change it to <br> 5.) Rotate charms - select charm and then use the rotate buttons <br> 6.) Position items - drag and drop either charms or name tags to required position. </h6> -->
         </div>
       </div>
     </section>
@@ -407,13 +334,21 @@
               	var angle = 0;
 
       			   function rotate_charm_right() {
-      			    angle += 15;
-      			    document.getElementById(charm_to_amend).style = "transform: rotate(" + angle + "deg)";
+                    angle += 15;
+
+                    var dm = document.getElementById(object_to_rotate);
+                    dm.style.transform = "rotate(" + angle + "deg)";
+                    // need this to prevent the location to return to its default location
+                    event.preventDefault();
+
       		     }
 
       		     function rotate_charm_left() {
       			    angle -= 15;
-      			    document.getElementById(charm_to_amend).style = "transform: rotate(" + angle + "deg)";
+      			    var dm = document.getElementById(object_to_rotate);
+                    dm.style.transform = "rotate(" + angle + "deg)";
+                    // need this to prevent the location to return to its default location
+                    event.preventDefault();
       		     }
         </script>
 
@@ -520,6 +455,7 @@ function visible_nameTag_function () {
   
 function selected_charm_one () {
           charm_to_amend = "charm_img_one";
+          object_to_rotate = "charm_img_one";
           charm_number_clicked = "1";
           document.getElementById("charm_number_text").innerHTML = "Charm " + charm_number_clicked + " Selected"
           return false;
@@ -527,6 +463,7 @@ function selected_charm_one () {
 
 function selected_charm_two () {
           charm_to_amend = "charm_img_two";
+          object_to_rotate = "charm_img_two";
           charm_number_clicked = "2";
           document.getElementById("charm_number_text").innerHTML = "Charm " + charm_number_clicked + " Selected"
           return false;
@@ -534,6 +471,7 @@ function selected_charm_two () {
 
 function selected_charm_three () {
           charm_to_amend = "charm_img_three";
+          object_to_rotate = "charm_img_three";
           charm_number_clicked = "3";
           document.getElementById("charm_number_text").innerHTML = "Charm " + charm_number_clicked + " Selected"
           return false;
@@ -541,6 +479,7 @@ function selected_charm_three () {
 
 function selected_charm_four () {
           charm_to_amend = "charm_img_four";
+          object_to_rotate = "charm_img_four";
           charm_number_clicked = "4";
           document.getElementById("charm_number_text").innerHTML = "Charm " + charm_number_clicked + " Selected"
           return false;
@@ -548,6 +487,7 @@ function selected_charm_four () {
 
 function selected_charm_five () {
           charm_to_amend = "charm_img_five";
+          object_to_rotate = "charm_img_five";
           charm_number_clicked = "5";
           document.getElementById("charm_number_text").innerHTML = "Charm " + charm_number_clicked + " Selected"
           return false;
@@ -565,6 +505,7 @@ function selected_charm_five () {
 <script type="text/javascript">
   
 function selected_nameTag_one() {
+          object_to_rotate = "name_tag";
           nameTag_to_amend = "name_tag_text";
           nameTagWidth_to_amend = "name_tag";
           nameTagImage_to_amend = "name_tag_image";
@@ -575,6 +516,7 @@ function selected_nameTag_one() {
 }
 
 function selected_nameTag_two() {
+          object_to_rotate = "name_tag_two";
           nameTag_to_amend = "name_tag_text_two";
           nameTagWidth_to_amend = "name_tag_two"
           nameTagImage_to_amend = "name_tag_image_two";
@@ -585,6 +527,7 @@ function selected_nameTag_two() {
 }
 
 function selected_nameTag_three() {
+          object_to_rotate = "name_tag_three";
           nameTag_to_amend = "name_tag_text_three";
           nameTagWidth_to_amend = "name_tag_three"
           nameTagImage_to_amend = "name_tag_image_three";
@@ -596,6 +539,7 @@ function selected_nameTag_three() {
 
 
 function selected_nameTag_four() {
+          object_to_rotate = "name_tag_four";
           nameTag_to_amend = "name_tag_text_four";
           nameTagWidth_to_amend = "name_tag_four"
           nameTagImage_to_amend = "name_tag_image_four";
@@ -700,22 +644,30 @@ function selected_nameTag_four() {
      			<!-- name tag inside the div - so we can move all elements inside the tag -->
           <div class="name_tag_div can_be_dragged" draggable = "true" id="name_tag" onmousedown="selected_nameTag_one()">
 	    			<p class="name_tag" id="name_tag_text"> live with no </p>
+            <img src="img/name_tags/pin.png" class="pin_image_left">
 	    			<img src="img/name_tags/3.png" class="name_tag_image" id="name_tag_image" >
+            <img src="img/name_tags/pin.png" class="pin_image_right">                       
 	    		</div>
 
           <div class="name_tag_div_two can_be_dragged" draggable = "true" id="name_tag_two" onmousedown="selected_nameTag_two()">
             <p class="name_tag_two" id="name_tag_text_two"> excuses and travel </p>
+            <img src="img/name_tags/pin.png" class="pin_image_left">
             <img src="img/name_tags/3.png" class="name_tag_image_two" id="name_tag_image_two">
+            <img src="img/name_tags/pin.png" class="pin_image_right">  
           </div>
 
           <div class="name_tag_div_three can_be_dragged" draggable = "true" id="name_tag_three" onmousedown="selected_nameTag_three()">
             <p class="name_tag_three" id="name_tag_text_three"> with no regrets </p>
+            <img src="img/name_tags/pin.png" class="pin_image_left">
             <img src="img/name_tags/3.png" class="name_tag_image_three" id="name_tag_image_three">
+            <img src="img/name_tags/pin.png" class="pin_image_right">  
           </div>
 
           <div class="name_tag_div_four can_be_dragged" draggable = "true" id="name_tag_four" onmousedown="selected_nameTag_four()">
             <p class="name_tag_four" id="name_tag_text_four"> JB Crafts </p>
+            <img src="img/name_tags/pin.png" class="pin_image_left">
             <img src="img/name_tags/4.png" class="name_tag_image_four" id="name_tag_image_four">
+            <img src="img/name_tags/pin.png" class="pin_image_right">  
           </div>
 
 
@@ -733,6 +685,7 @@ function selected_nameTag_four() {
             data-item-name="Passport Cover"
             data-item-stackable="false"
             data-item-description="Colour:pink etc."
+            data-item-image = "img/charms/thumbnails/5.png"
             data-item-price="12.00"
             data-item-weight="20"
             data-item-url="file:///C:/Users/james/Desktop/play%20around/docs/personalise_passport.html#!/"
@@ -740,6 +693,8 @@ function selected_nameTag_four() {
                 Add to basket
           </button>
         </div>
+
+
 
            
         </div>

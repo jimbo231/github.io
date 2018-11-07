@@ -23,23 +23,47 @@ $('.can_be_dragged').mousedown(function(){
 // means that every .can_be_dragged id is stored in the can_be_dragged place = can_be_dragged location
 now_id = $(this).attr('id');
 
+
+
     
 function drag_start(event) {
     var style = window.getComputedStyle(event.target, null);
     event.dataTransfer.setData("text/plain",
     (parseInt(style.getPropertyValue("left"),10) - event.clientX) + ',' + (parseInt(style.getPropertyValue("top"),10) - event.clientY));
+
 } 
 function drag_over(event) { 
     event.preventDefault(); 
     return false; 
 } 
-function drop(event) { 
+function drop(event) {
     var offset = event.dataTransfer.getData("text/plain").split(',');
     var dm = document.getElementById(now_id);
+    // checking if it is within the specified boundries - will have to do this for name_tags seperately
+    if (event.clientX + parseInt(offset[0],10) < -83) {
+        tempAlert("Please keep object inside the passport area",3000);
+        return false;
+    }
+    else if (event.clientX + parseInt(offset[0],10) > 430) {
+        tempAlert("Please keep object inside the passport area",3000);
+        return false;
+    }
+    else {   
     dm.style.left = (event.clientX + parseInt(offset[0],10)) + 'px';
     dm.style.top = (event.clientY + parseInt(offset[1],10)) + 'px';
     event.preventDefault();
     return false;
+    }
+
+    function tempAlert(msg,duration) {
+                 var el = document.createElement("div");
+                 el.setAttribute("style","position:absolute; top:70%; left:0%; text-align: center; opacity: 0.7;  padding: 1rem; width: 100%; height:auto;margin-bottom: 1.5rem;background: #909fa0;z-index:20;font-size: 3.15rem;font-weight: 700;");
+                 el.innerHTML = msg;
+                 setTimeout(function(){
+                  el.parentNode.removeChild(el);
+                 },duration);
+                 document.body.appendChild(el);
+        }
 
 } 
 var dm = document.getElementById(now_id); 
@@ -63,6 +87,18 @@ document.body.addEventListener('drop',drop,false);
 
 
 $(function () {
+
+
+
+    function tempAlert(msg,duration) {
+                 var el = document.createElement("div");
+                 el.setAttribute("style","position:absolute;top:40%;left:20%;background-color:white;z-index:20;");
+                 el.innerHTML = msg;
+                 setTimeout(function(){
+                  el.parentNode.removeChild(el);
+                 },duration);
+                 document.body.appendChild(el);
+        }
 
     // ------------------------------------------------------- //
     //   Multilevel dropdowns
