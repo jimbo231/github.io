@@ -34,6 +34,9 @@
    <!--  <script type="text/javascript"> Snipcart.api.configure('show_continue_shopping', true);
  </script> -->
 
+ <!-- adding the script for the screen shot -->
+ <script type="js/html2canvas.min.js"></script>
+
 <!-- adding the scripts for the snipcart (demo version) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
@@ -93,11 +96,13 @@
           <h1 class="hero-heading">Personalise</h1>
 
         <div class="center_main_image">
-          <button class="tutorial_button">
+          <button class="tutorial_button" onclick="get_screenshot_2()"  >
                 Tutorial
           </button>
         </div>
 
+
+        
           <!-- <h6 class="instructions">1.) Pick passport colour - use colour pallet <br> 2.) Select number of charms & name tags you want <br> 3.) Choose charms - select which charm to change and then select what to change it to from the charm picker <br> 4.) Choose name tag colours - select which name tag to change and then select which colour to change it to <br> 5.) Rotate charms - select charm and then use the rotate buttons <br> 6.) Position items - drag and drop either charms or name tags to required position. </h6> -->
         </div>
       </div>
@@ -603,9 +608,9 @@ function selected_nameTag_four() {
 
         <!-- Grid -->
 
-        <div class="col-xl-6 col-lg-8 order-lg-2">
+        <div class="col-xl-6 col-lg-8 order-lg-2" >
           <!-- not sure we want this as a row product -->
-            <div class="center_main_image">
+            <div class="center_main_image" >
                   <p class="charm_selected" id="charm_number_text"> Please select charm </p>
             </div>
             <div class="center_main_image">
@@ -617,7 +622,7 @@ function selected_nameTag_four() {
 
 
             <!-- product-->
-             <div class="center_main_image">
+             <div class="center_main_image" id="capture" >
                   <img src="img/passport_colours/3.png" class="personalise-image" id="main_passport">
              </div>
                   <!-- need the img inside the div otherwise it cannot be moved - need to make it so you cannot move out the div-->
@@ -1222,9 +1227,20 @@ function selected_nameTag_four() {
         </div>
       </div>
     </footer>
+
+
+
+
+
+
     <!-- /Footer end-->
     <div id="scrollTop"><i class="fa fa-long-arrow-alt-up"></i></div>
     <!-- JavaScript files-->
+
+    <!-- screenshot javascript - should put other files here -->
+
+
+
     <script>
       // ------------------------------------------------------- //
       //   Inject SVG Sprite - 
@@ -1256,6 +1272,8 @@ function selected_nameTag_four() {
     <script src="vendor/smooth-scroll/smooth-scroll.polyfills.min.js"></script>
     <script src="vendor/ekko-lightbox/ekko-lightbox.min.js"></script>
     <script src="js/theme.js"></script>
+    <!-- adding the script for HTML to canvas for the screen shot -->
+    <script type="text/javascript" src="js/promise.js"></script>
     <script>
       var snapSlider = document.getElementById('slider-snap');
       
@@ -1278,5 +1296,38 @@ function selected_nameTag_four() {
       });
       
     </script>
+
+
+
+<button onclick="get_screenshot_2()">
+  
+</button>
+
+<!-- <div id="capture" style="padding: 10px; background: #f5da55">
+    <h4 style="color: #000; ">Hello world!</h4>
+</div> -->
+
+
+<script type="text/javascript" src="js/html2canvas.min.js"></script>
+<script type="text/javascript">
+  function get_screenshot_2() {
+
+    html2canvas(document.querySelector("#capture")).then(canvas => {
+    // document.body.appendChild(canvas)
+
+      var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+      console.log(image);
+      window.location.href = image;
+
+});   
+}
+</script>
+
+
+
+
+
+
+
   </body>
 </html>
