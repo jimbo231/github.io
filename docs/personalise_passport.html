@@ -95,11 +95,11 @@
         <div class="hero-content pb-5 text-center">
           <h1 class="hero-heading">Personalise</h1>
 
-        <div class="center_main_image">
+        <!-- <div class="center_main_image">
           <button class="tutorial_button" onclick="get_screenshot_2()"  >
                 Capture Image
           </button>
-        </div>
+        </div> -->
 
 
         
@@ -118,7 +118,7 @@
 
 
 
-    <div class="container">
+    <div class="container" id="where_to_append">
       <div class="row">
 
         <!-- Sidebar-->
@@ -619,10 +619,10 @@ function selected_nameTag_four() {
 
 
             <!-- creating a div to capture the image -->
-
+            <div id="capture_2">
 
             <!-- product-->
-             <div class="center_main_image" >
+             <div class="center_main_image">
                   <img src="img/passport_colours/3.png" class="personalise-image" id="main_passport">
              </div>
                   <!-- need the img inside the div otherwise it cannot be moved - need to make it so you cannot move out the div-->
@@ -675,6 +675,9 @@ function selected_nameTag_four() {
             <img src="img/name_tags/pin.png" class="pin_image_right">  
           </div>
 
+          </div>
+
+
 
           <div class="center_main_image inspiration_text">
             
@@ -682,7 +685,15 @@ function selected_nameTag_four() {
 
           </div>
 
-				
+
+        <div class="center_main_image">
+          <button class="add_to_cart_1" onclick="get_screenshot_2()">
+                Save Image
+          </button>
+        </div>
+
+
+<!-- 				
         <div class="center_main_image">
           <button
             class="snipcart-add-item add_to_cart_1"
@@ -697,7 +708,7 @@ function selected_nameTag_four() {
             data-item-description="Personalised passport cover">
                 Add to basket
           </button>
-        </div>
+        </div> -->
 
 
 
@@ -1312,14 +1323,19 @@ function selected_nameTag_four() {
 <script type="text/javascript">
   function get_screenshot_2() {
 
-    html2canvas(document.querySelector("#capture")).then(canvas => {
-    // document.body.appendChild(canvas)
 
-      var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
-      console.log(image);
-      window.location.href = image;
+    html2canvas(document.getElementById('capture_2')).then(function(canvas) {
+        document.getElementById('where_to_append').appendChild(canvas);
+    });
 
-});   
+// this code saves the middle block as an image to be downloaded - however we want to append then cosntantly to the page
+//     html2canvas(document.querySelector("#capture")).then(canvas => {
+//       var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+//       console.log(image);
+//       window.location.href = image;
+// });   
+
+
 }
 </script>
 

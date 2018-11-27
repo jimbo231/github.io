@@ -8,7 +8,6 @@
 
 
 
-
 .personalise-image {
   position: relative;
   /*
@@ -53,7 +52,7 @@
   display: flex;
   position: absolute;
   left: 50%;
-  bottom: 20%;
+  bottom: 22%;
   height: auto;
   width: 43%; 
 }
@@ -62,7 +61,7 @@
 .charm_three {
   display: flex;
   position: absolute;
-  left: 18%;
+  left: 20%;
   bottom: 25%;
   height: auto;
   width: 43%; 
@@ -185,11 +184,12 @@
 
 /*Name tag styles*/
 .name_tag_div {
-  position: relative;
-  left: 26%;
-  bottom: 60%;
+  position: absolute;
+  left: 27%;
+  bottom: 70%;
   align-content: center;
   width: 45%;
+  height: 5%;
 
   display: -webkit-flex; /* Safari */
     -webkit-align-items: center; /* Safari 7.0+ */
@@ -215,7 +215,7 @@
 .name_tag_image {
   position: absolute;
   z-index: 1;
-  height: 120%;
+  height: 40px;
   width: 100%;
 }
 
@@ -225,11 +225,12 @@
 
 /*Name tag styles*/
 .name_tag_div_two {
-  position: relative;
-  left: 18%;
-  bottom: 57%;
+  position: absolute;
+  left: 19%;
+  bottom: 63%;
   align-content: center;
   width: 63%;
+  height: 5%;
 
   display: -webkit-flex; /* Safari */
     -webkit-align-items: center; /* Safari 7.0+ */
@@ -255,7 +256,7 @@
 .name_tag_image_two {
   position: absolute;
   z-index: 1;
-  height: 120%;
+  height: 40px;
   width: 100%;
 }
 
@@ -264,11 +265,12 @@
 
 /*Name tag styles*/
 .name_tag_div_three {
-  position: relative;
-  left: 23%;
-  bottom: 54%;
+  position: absolute;
+  left: 22%;
+  bottom: 56%;
   align-content: center;
   width: 55%;
+  height: 5%;
 
   display: -webkit-flex; /* Safari */
     -webkit-align-items: center; /* Safari 7.0+ */
@@ -294,7 +296,7 @@
 .name_tag_image_three {
   position: absolute;
   z-index: 1;
-  height: 120%;
+  height: 40px;
   width: 100%;
 }
 
@@ -303,11 +305,12 @@
 
 /*Name tag styles*/
 .name_tag_div_four {
-  position: relative;
+  position: absolute;
   left: 20%;
-  bottom: 28%;
+  bottom: 27%;
   align-content: center;
   width: 35%;
+  height: 5%;
 
   display: -webkit-flex; /* Safari */
     -webkit-align-items: center; /* Safari 7.0+ */
@@ -333,7 +336,7 @@
 .name_tag_image_four {
   position: absolute;
   z-index: 1;
-  height: 120%;
+  height: 40px;
   width: 100%;
 }
 
@@ -410,7 +413,7 @@
   background:#1AAB8A;
   color:#fff;
   border:none;
-  position:absolute;
+  position:relative;
   bottom: 0%;
   height:60px;
   font-size:1.6em;
@@ -648,12 +651,8 @@
   font-weight: 400;
   color: #868e96;
   letter-spacing: 0.1em;
-  position: absolute;
-  bottom: 14%;
-  left: 26%;
-
-
-
-
-
+  position: relative;
 }
+
+
+
