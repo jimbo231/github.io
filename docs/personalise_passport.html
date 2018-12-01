@@ -44,7 +44,10 @@
 <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="YzdmMzQ2YTgtNzhkNi00NzI4LWI0NmItMjY3YWQ5NGMzMjcwNjM2NzUxOTUyMjI1MzMyMzMz"></script>
 
 <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" type="text/css" rel="stylesheet" />
-
+<!-- adds in the continue shopping button -->
+<script type="text/javascript">
+Snipcart.execute('config', 'show_continue_shopping', true);
+</script>
 <!-- setting default number of charms so it can be shown it text on load -->
   </head>
   <body>
@@ -228,6 +231,7 @@
                 </ul>
               </div>
             </div>
+            <h6 class="sidebar-sub_heading" id="colour_picked_text">Colour: Tan</h6> 
           </div>
 
           <!-- name tag colour pallet picker -->
@@ -281,6 +285,7 @@
                 </ul>
               </div>
             </div>
+            <h6 class="sidebar-sub_heading" id="nameTag_colour_picked_text">Colour: </h6>
           </div>
 
 
@@ -306,6 +311,55 @@
         <script type="text/javascript">
               function change_passport(imgid,newimg,list_id){
                 document.getElementById(imgid).src = "img/passport_colours/" + newimg +".png";
+
+                var colour_picked_number = newimg;
+
+                switch (colour_picked_number) {
+                        case 1:
+                            colour_picked = "Sand";
+                            break;
+                        case 2:
+                            colour_picked = "Taupe";
+                            break;
+                        case 3:
+                            colour_picked = "Tan";
+                            break;
+                        case 4:
+                            colour_picked = "Camel";
+                            break;
+                        case 5:
+                            colour_picked = "Chocolate";
+                            break;
+                        case 6:
+                            colour_picked = "Sea Green";
+                            break;
+                        case 7:
+                            colour_picked = "Forest Green";
+                            break;
+                        case 8:
+                            colour_picked = "Burgundy";
+                            break;
+                        case 9:
+                            colour_picked = "Dark Copper";
+                            break;
+                        case 10:
+                            colour_picked = "Coral";
+                            break;
+                        case 11:
+                            colour_picked = "Dark Dusty Pink";
+                            break;
+                        case 12:
+                            colour_picked = "Rose Gold";
+                            break;
+                        case 14:
+                            colour_picked = "Dark Grey";
+                            break;                                    
+                        case 15:
+                            colour_picked = "Black";
+                  }
+                  document.getElementById("colour_picked_text").innerHTML = "Colour: " + colour_picked;
+
+
               }
         </script>
 
@@ -317,7 +371,41 @@
         <script type="text/javascript">
               function change_name_tag(imgid,newimg,list_id){
                 document.getElementById(nameTagImage_to_amend).src = "img/name_tags/" + newimg +".png";
-              }
+              
+
+              var nameTag_colour_picked_number = newimg;
+
+                switch (nameTag_colour_picked_number) {
+                        case 1:
+                            nameTag_colour_picked = "Maroon";
+                            break;
+                        case 2:
+                            nameTag_colour_picked = "Brick Red";
+                            break;
+                        case 3:
+                            nameTag_colour_picked = "Dark Bronze";
+                            break;
+                        case 4:
+                            nameTag_colour_picked = "Gold";
+                            break;
+                        case 5:
+                            nameTag_colour_picked = "Bronze";
+                            break;
+                        case 6:
+                            nameTag_colour_picked = "Pale Gold";
+                            break;
+                        case 7:
+                            nameTag_colour_picked = "Clay";
+                            break;
+                        case 8:
+                            nameTag_colour_picked = "Silver";
+                            break;                             
+                        case 9:
+                            nameTag_colour_picked = "Teal";
+                            
+                  }
+                  document.getElementById("nameTag_colour_picked_text").innerHTML = "Colour: " + nameTag_colour_picked;
+                }
         </script>
 
 <!--------------------------------------------------->
@@ -367,6 +455,11 @@
 
 <script type="text/javascript">
 
+var base_price = 11.00;
+var nameTag_added_price = 1.50;
+var charm_added_price = 1.00;
+var current_price = 0.00;
+
       function visible_charms_function() {
         if (document.getElementById('rb1').checked){
           document.getElementById('charm_img_one').style = "z-index: 1";
@@ -374,6 +467,10 @@
           document.getElementById('charm_img_three').style = "z-index: -1";
           document.getElementById('charm_img_four').style = "z-index: -1";
           document.getElementById('charm_img_five').style = "z-index: -1";
+          charm_added_price = 0.00;
+          current_price = base_price + nameTag_added_price + charm_added_price;
+          current_price = current_price.toFixed(2);
+          document.getElementById("current_price_text").innerHTML = "The current price is £" + current_price;
         }
         else if (document.getElementById('rb2').checked){
           document.getElementById('charm_img_one').style = "z-index: 1";
@@ -381,6 +478,10 @@
           document.getElementById('charm_img_three').style = "z-index: -1";
           document.getElementById('charm_img_four').style = "z-index: -1";
           document.getElementById('charm_img_five').style = "z-index: -1";
+          charm_added_price = 0.50;
+          current_price = base_price + nameTag_added_price + charm_added_price;
+          current_price = current_price.toFixed(2);
+          document.getElementById("current_price_text").innerHTML = "The current price is £" + current_price;
         }
         else if (document.getElementById('rb3').checked){
           document.getElementById('charm_img_one').style = "z-index: 1";
@@ -388,6 +489,10 @@
           document.getElementById('charm_img_three').style = "z-index: 1";
           document.getElementById('charm_img_four').style = "z-index: -1";
           document.getElementById('charm_img_five').style = "z-index: -1";
+          charm_added_price = 1.00;
+          current_price = base_price + nameTag_added_price + charm_added_price;
+          current_price = current_price.toFixed(2);
+          document.getElementById("current_price_text").innerHTML = "The current price is £" + current_price;
         }
         else if (document.getElementById('rb4').checked){
           document.getElementById('charm_img_one').style = "z-index: 1";
@@ -395,6 +500,10 @@
           document.getElementById('charm_img_three').style = "z-index: 1";
           document.getElementById('charm_img_four').style = "z-index: 1";
           document.getElementById('charm_img_five').style = "z-index: -1";
+          charm_added_price = 1.50;
+          current_price = base_price + nameTag_added_price + charm_added_price;
+          current_price = current_price.toFixed(2);
+          document.getElementById("current_price_text").innerHTML = "The current price is £" + current_price;
         }
         else if (document.getElementById('rb5').checked){
           document.getElementById('charm_img_one').style = "z-index: 1";
@@ -402,19 +511,19 @@
           document.getElementById('charm_img_three').style = "z-index: 1";
           document.getElementById('charm_img_four').style = "z-index: 1";
           document.getElementById('charm_img_five').style = "z-index: 1";
+          charm_added_price = 2.00;
+          current_price = base_price + nameTag_added_price + charm_added_price;
+          current_price = current_price.toFixed(2);
+          document.getElementById("current_price_text").innerHTML = "The current price is £" + current_price;
         }
 
       }  
 
-</script>
 
+// <!--------------------------------------------------->
+// <!--        Changing number of name tags           -->
+// <!---------------------------------------------------> 
 
-
-<!--------------------------------------------------->
-<!--        Changing number of name tags           -->
-<!---------------------------------------------------> 
-
-<script type="text/javascript">
   
 function visible_nameTag_function () {
 
@@ -423,24 +532,40 @@ function visible_nameTag_function () {
           document.getElementById('name_tag_two').style = "z-index: -1";
           document.getElementById('name_tag_three').style = "z-index: -1";
           document.getElementById('name_tag_four').style = "z-index: -1";
+          nameTag_added_price = 0.00;
+          current_price = base_price + nameTag_added_price + charm_added_price;
+          current_price = current_price.toFixed(2);
+          document.getElementById("current_price_text").innerHTML = "The current price is £" + current_price;
         }
  else if (document.getElementById('nt2').checked){
           document.getElementById('name_tag').style = "z-index: 1";
           document.getElementById('name_tag_two').style = "z-index: 1";
           document.getElementById('name_tag_three').style = "z-index: -1";
           document.getElementById('name_tag_four').style = "z-index: -1";
+          nameTag_added_price = 0.50;
+          current_price = base_price + nameTag_added_price + charm_added_price;
+          current_price = current_price.toFixed(2);
+          document.getElementById("current_price_text").innerHTML = "The current price is £" + current_price;
         }
  else if (document.getElementById('nt3').checked){
           document.getElementById('name_tag').style = "z-index: 1";
           document.getElementById('name_tag_two').style = "z-index: 1";
           document.getElementById('name_tag_three').style = "z-index: 1";
           document.getElementById('name_tag_four').style = "z-index: -1";
+          nameTag_added_price = 1.00;
+          current_price = base_price + nameTag_added_price + charm_added_price;
+          current_price = current_price.toFixed(2);
+          document.getElementById("current_price_text").innerHTML = "The current price is £" + current_price;
         }
  else if (document.getElementById('nt4').checked){
           document.getElementById('name_tag').style = "z-index: 1";
           document.getElementById('name_tag_two').style = "z-index: 1";
           document.getElementById('name_tag_three').style = "z-index: 1";
           document.getElementById('name_tag_four').style = "z-index: 1";
+          nameTag_added_price = 1.50;
+          current_price = base_price + nameTag_added_price + charm_added_price;
+          current_price = current_price.toFixed(2);
+          document.getElementById("current_price_text").innerHTML = "The current price is £" + current_price;
         }               
 
 }
@@ -616,6 +741,9 @@ function selected_nameTag_four() {
             <div class="center_main_image">
                   <p class="nameTag_selected" id="nameTag_number_text"> Please select name tag </p>
             </div>
+            <div class="center_main_image">
+                  <p class="current_price_text" id="current_price_text"> The current price is £13.50 </p>
+            </div>
 
 
             <!-- creating a div to capture the image -->
@@ -693,17 +821,19 @@ function selected_nameTag_four() {
         </div>
 
 
-<!-- 				
-        <div class="center_main_image">
+				
+       <!--  <div class="center_main_image">
           <button
-            class="snipcart-add-item add_to_cart_1"
+            class="snipcart-add-item add_to_cart_1" id="my-button"
             data-item-id="2"
             data-item-name="Passport Cover"
             data-item-stackable="false"
-            data-item-description="Colour:pink etc."
+            data-item-description= data-item-name + "Colour:pink etc."
             data-item-image = "img/charms/thumbnails/5.png"
             data-item-price="12.00"
             data-item-weight="20"
+            data-item-quantity="5"
+            data-item-custom1="Text"
             data-item-url="file:///C:/Users/james/Desktop/play%20around/docs/personalise_passport.html#!/"
             data-item-description="Personalised passport cover">
                 Add to basket
@@ -1326,6 +1456,7 @@ function selected_nameTag_four() {
 
     html2canvas(document.getElementById('capture_2')).then(function(canvas) {
         document.getElementById('where_to_append').appendChild(canvas);
+        var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
     });
 
 // this code saves the middle block as an image to be downloaded - however we want to append then cosntantly to the page

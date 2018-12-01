@@ -10,6 +10,17 @@
 $(document).ready(function() {
     // your code here
  
+// Javascript for snipcart here: ##################################
+
+// $('#nt2').change(function() {
+//     $('#my-button').data('item-description', $('#current_price_text').val());
+//     alert("You entered p1!" + current_price);
+// });
+
+
+
+//End Snipcart code ###############################################
+
 
 // What you need to is be able to store what object is 'dragme'
 // e.g. if class = two selected then i = dragme_1 etc - you get the idea
