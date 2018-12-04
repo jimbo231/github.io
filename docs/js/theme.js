@@ -10,12 +10,12 @@
 $(document).ready(function() {
     // your code here
  
-// Javascript for snipcart here: ##################################
+// Javascript for snipcart here: ################################## - DOES not work so did something else
 
-// $('#nt2').change(function() {
-//     $('#my-button').data('item-description', $('#current_price_text').val());
-//     alert("You entered p1!" + current_price);
-// });
+    // $('#nt2').change(function() {
+    //     $('#my-button').data('item-price', current_price);
+    //     alert("You entered p1!" + $('#current_price_text').text() + current_price);
+    // });
 
 
 

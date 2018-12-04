@@ -309,6 +309,9 @@ Snipcart.execute('config', 'show_continue_shopping', true);
 <!--------------------------------------------------->
 
         <script type="text/javascript">
+
+            var colour_picked = "Tan";
+
               function change_passport(imgid,newimg,list_id){
                 document.getElementById(imgid).src = "img/passport_colours/" + newimg +".png";
 
@@ -369,6 +372,9 @@ Snipcart.execute('config', 'show_continue_shopping', true);
 <!--------------------------------------------------->        
 
         <script type="text/javascript">
+
+          var nameTag_colour_picked = "Dark Bronze";
+
               function change_name_tag(imgid,newimg,list_id){
                 document.getElementById(nameTagImage_to_amend).src = "img/name_tags/" + newimg +".png";
               
@@ -458,7 +464,8 @@ Snipcart.execute('config', 'show_continue_shopping', true);
 var base_price = 11.00;
 var nameTag_added_price = 1.50;
 var charm_added_price = 1.00;
-var current_price = 0.00;
+var current_price = 14.00.toFixed(2);
+var number_of_charms_selected = 3;
 
       function visible_charms_function() {
         if (document.getElementById('rb1').checked){
@@ -467,6 +474,7 @@ var current_price = 0.00;
           document.getElementById('charm_img_three').style = "z-index: -1";
           document.getElementById('charm_img_four').style = "z-index: -1";
           document.getElementById('charm_img_five').style = "z-index: -1";
+          number_of_charms_selected = 1;
           charm_added_price = 0.00;
           current_price = base_price + nameTag_added_price + charm_added_price;
           current_price = current_price.toFixed(2);
@@ -478,6 +486,7 @@ var current_price = 0.00;
           document.getElementById('charm_img_three').style = "z-index: -1";
           document.getElementById('charm_img_four').style = "z-index: -1";
           document.getElementById('charm_img_five').style = "z-index: -1";
+          number_of_charms_selected = 2;
           charm_added_price = 0.50;
           current_price = base_price + nameTag_added_price + charm_added_price;
           current_price = current_price.toFixed(2);
@@ -489,6 +498,7 @@ var current_price = 0.00;
           document.getElementById('charm_img_three').style = "z-index: 1";
           document.getElementById('charm_img_four').style = "z-index: -1";
           document.getElementById('charm_img_five').style = "z-index: -1";
+          number_of_charms_selected = 3;
           charm_added_price = 1.00;
           current_price = base_price + nameTag_added_price + charm_added_price;
           current_price = current_price.toFixed(2);
@@ -500,6 +510,7 @@ var current_price = 0.00;
           document.getElementById('charm_img_three').style = "z-index: 1";
           document.getElementById('charm_img_four').style = "z-index: 1";
           document.getElementById('charm_img_five').style = "z-index: -1";
+          number_of_charms_selected = 4;
           charm_added_price = 1.50;
           current_price = base_price + nameTag_added_price + charm_added_price;
           current_price = current_price.toFixed(2);
@@ -511,6 +522,7 @@ var current_price = 0.00;
           document.getElementById('charm_img_three').style = "z-index: 1";
           document.getElementById('charm_img_four').style = "z-index: 1";
           document.getElementById('charm_img_five').style = "z-index: 1";
+          number_of_charms_selected = 5;
           charm_added_price = 2.00;
           current_price = base_price + nameTag_added_price + charm_added_price;
           current_price = current_price.toFixed(2);
@@ -524,14 +536,24 @@ var current_price = 0.00;
 // <!--        Changing number of name tags           -->
 // <!---------------------------------------------------> 
 
+var number_of_nameTags_selected = 4;
+
+var name_tag_text_1 = "LIVE WITH NO"
+var name_tag_text_2 = "EXCUSES AND TRAVEL"
+var name_tag_text_3 = "WITH NO REGRETS"
+var name_tag_text_4 = "JB CRAFTS"
+var cart_nameTag_description = "Name tag 1 text: " + name_tag_text_1 + ". Name tag 2 text: " + name_tag_text_2 + ". Name tag 3 text: " + name_tag_text_3 + ". Name tag 4 text: " + name_tag_text_4;
   
 function visible_nameTag_function () {
+
+
 
  if (document.getElementById('nt1').checked){
           document.getElementById('name_tag').style = "z-index: 1";
           document.getElementById('name_tag_two').style = "z-index: -1";
           document.getElementById('name_tag_three').style = "z-index: -1";
           document.getElementById('name_tag_four').style = "z-index: -1";
+          number_of_nameTags_selected = 1;
           nameTag_added_price = 0.00;
           current_price = base_price + nameTag_added_price + charm_added_price;
           current_price = current_price.toFixed(2);
@@ -542,6 +564,7 @@ function visible_nameTag_function () {
           document.getElementById('name_tag_two').style = "z-index: 1";
           document.getElementById('name_tag_three').style = "z-index: -1";
           document.getElementById('name_tag_four').style = "z-index: -1";
+          number_of_nameTags_selected = 2;
           nameTag_added_price = 0.50;
           current_price = base_price + nameTag_added_price + charm_added_price;
           current_price = current_price.toFixed(2);
@@ -552,6 +575,7 @@ function visible_nameTag_function () {
           document.getElementById('name_tag_two').style = "z-index: 1";
           document.getElementById('name_tag_three').style = "z-index: 1";
           document.getElementById('name_tag_four').style = "z-index: -1";
+          number_of_nameTags_selected = 3;
           nameTag_added_price = 1.00;
           current_price = base_price + nameTag_added_price + charm_added_price;
           current_price = current_price.toFixed(2);
@@ -562,11 +586,44 @@ function visible_nameTag_function () {
           document.getElementById('name_tag_two').style = "z-index: 1";
           document.getElementById('name_tag_three').style = "z-index: 1";
           document.getElementById('name_tag_four').style = "z-index: 1";
+          number_of_nameTags_selected = 4;
           nameTag_added_price = 1.50;
           current_price = base_price + nameTag_added_price + charm_added_price;
           current_price = current_price.toFixed(2);
           document.getElementById("current_price_text").innerHTML = "The current price is £" + current_price;
-        }               
+        }         
+
+
+
+    if (document.getElementById('nt1').checked){
+                      name_tag_text_1 = document.getElementById("name_tag_text").innerHTML;
+                      return false;
+                      name_tag_text_2 = "";
+                      name_tag_text_3 = "";
+                      name_tag_text_4 = "";
+                      cart_nameTag_description = "Name tag 1 text: " + name_tag_text_1;
+                      }
+               else if (document.getElementById('nt2').checked){
+                      name_tag_text_1 = document.getElementById("name_tag_text").innerHTML;
+                      name_tag_text_2 = document.getElementById("name_tag_text_two").innerHTML;
+                      name_tag_text_3 = "";
+                      name_tag_text_4 = "";
+                      cart_nameTag_description = "Name tag 1 text: " + name_tag_text_1 + ". Name tag 2 text: " + name_tag_text_2;
+                      }
+               else if (document.getElementById('nt3').checked){
+                      name_tag_text_1 = document.getElementById("name_tag_text").innerHTML;
+                      name_tag_text_2 = document.getElementById("name_tag_text_two").innerHTML;
+                      name_tag_text_3 = document.getElementById("name_tag_text_three").innerHTML;
+                      name_tag_text_4 = "";
+                      cart_nameTag_description = "Name tag 1 text: " + name_tag_text_1 + ". Name tag 2 text: " + name_tag_text_2 + ". Name tag 3 text: " + name_tag_text_3;
+                      }
+               else if (document.getElementById('nt4').checked){
+                      name_tag_text_1 = document.getElementById("name_tag_text").innerHTML;
+                      name_tag_text_2 = document.getElementById("name_tag_text_two").innerHTML;
+                      name_tag_text_3 = document.getElementById("name_tag_text_three").innerHTML;
+                      name_tag_text_4 = document.getElementById("name_tag_text_four").innerHTML;
+                      cart_nameTag_description = "Name tag 1 text: " + name_tag_text_1 + ". Name tag 2 text: " + name_tag_text_2 + ". Name tag 3 text: " + name_tag_text_3 + ". Name tag 4 text: " + name_tag_text_4;
+                      }      
 
 }
 
@@ -687,18 +744,19 @@ function selected_nameTag_four() {
 <!---------------------------------------------------> 
 
         <script type="text/javascript">
+
             	function  name_on_passport () {
       						var user_name = document.getElementById("user_name").value;
                   var length_user_name = user_name.length;
 
-                  
                   document.getElementById(nameTagWidth_to_amend).style.width = 10 + length_user_name * 4 + "%";
                   
-                  
-
-
       						document.getElementById(nameTag_to_amend).innerHTML = user_name
       						return false;
+
+
+
+                   
 
     					}
         </script>
@@ -814,6 +872,7 @@ function selected_nameTag_four() {
           </div>
 
 
+
         <div class="center_main_image">
           <button class="add_to_cart_1" onclick="get_screenshot_2()">
                 Save Image
@@ -822,17 +881,17 @@ function selected_nameTag_four() {
 
 
 				
-       <!--  <div class="center_main_image">
+        <!-- <div class="center_main_image">
           <button
-            class="snipcart-add-item add_to_cart_1" id="my-button"
+            class="snipcart-add-item add_to_cart_1"
+            id="my-button"
             data-item-id="2"
             data-item-name="Passport Cover"
             data-item-stackable="false"
             data-item-description= data-item-name + "Colour:pink etc."
-            data-item-image = "img/charms/thumbnails/5.png"
+            data-item-image = "img/passport_colours/3.png"
             data-item-price="12.00"
-            data-item-weight="20"
-            data-item-quantity="5"
+            data-item-quantity="1"
             data-item-custom1="Text"
             data-item-url="file:///C:/Users/james/Desktop/play%20around/docs/personalise_passport.html#!/"
             data-item-description="Personalised passport cover">
@@ -853,7 +912,7 @@ function selected_nameTag_four() {
 
         
 <!-- Sidebar-->
-        <div class="sidebar col-xl-3 col-lg-4 order-lg-3">
+        <div class="sidebar col-xl-3 col-lg-4 order-lg-3" >
 
 
 
@@ -1271,6 +1330,57 @@ function selected_nameTag_four() {
     </div>
 
 
+    <!-- creating a div for the saved images to go into nicely --> 
+
+
+    <div class="container" id="where_to_append">
+      <div class="row">
+
+        <!-- Sidebar-->
+        <div class="sidebar col-xl-6 col-lg-6 order-lg-1" id="where_to_append_1">
+
+<p> <b></b></p>
+
+
+        </div>
+
+        <div class="sidebar col-xl-6 col-lg-6 order-lg-1" id="where_to_append_2">
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    
     <!-- Footer-->
     <footer class="main-footer">
@@ -1451,13 +1561,166 @@ function selected_nameTag_four() {
 
 <script type="text/javascript" src="js/html2canvas.min.js"></script>
 <script type="text/javascript">
+  var number_of_saves_clicked = 0;
+  var using = number_of_saves_clicked % 2;
+
   function get_screenshot_2() {
 
 
+    // Saving all the things that need to be sent to Jon and Bow via email:
+
+// ################################################################ //
+        //Names on name tags based on number of tags selected//
+// ################################################################ //
+    
+      if (document.getElementById('nt1').checked){
+                      name_tag_text_1 = document.getElementById("name_tag_text").innerHTML;
+                      return false;
+                      name_tag_text_2 = "";
+                      name_tag_text_3 = "";
+                      name_tag_text_4 = "";
+                      cart_nameTag_description = "Name tag 1 text: " + name_tag_text_1;
+                      }
+               else if (document.getElementById('nt2').checked){
+                      name_tag_text_1 = document.getElementById("name_tag_text").innerHTML;
+                      name_tag_text_2 = document.getElementById("name_tag_text_two").innerHTML;
+                      name_tag_text_3 = "";
+                      name_tag_text_4 = "";
+                      cart_nameTag_description = "Name tag 1 text: " + name_tag_text_1 + ". Name tag 2 text: " + name_tag_text_2;
+                      }
+               else if (document.getElementById('nt3').checked){
+                      name_tag_text_1 = document.getElementById("name_tag_text").innerHTML;
+                      name_tag_text_2 = document.getElementById("name_tag_text_two").innerHTML;
+                      name_tag_text_3 = document.getElementById("name_tag_text_three").innerHTML;
+                      name_tag_text_4 = "";
+                      cart_nameTag_description = "Name tag 1 text: " + name_tag_text_1 + ". Name tag 2 text: " + name_tag_text_2 + ". Name tag 3 text: " + name_tag_text_3;
+                      }
+               else if (document.getElementById('nt4').checked){
+                      name_tag_text_1 = document.getElementById("name_tag_text").innerHTML;
+                      name_tag_text_2 = document.getElementById("name_tag_text_two").innerHTML;
+                      name_tag_text_3 = document.getElementById("name_tag_text_three").innerHTML;
+                      name_tag_text_4 = document.getElementById("name_tag_text_four").innerHTML;
+                      cart_nameTag_description = "Name tag 1 text: " + name_tag_text_1 + ". Name tag 2 text: " + name_tag_text_2 + ". Name tag 3 text: " + name_tag_text_3 + ". Name tag 4 text: " + name_tag_text_4;
+                      }
+
+// ################################################################ //
+                    //What Charms are chosen?//
+// ################################################################ //
+
+
+
+// ################################################################ //
+                   //Position of charms selected//
+// ################################################################ //
+
+
+// ################################################################ //
+                  //Position of nameTags selected//
+// ################################################################ //
+
+
+
+    number_of_saves_clicked = number_of_saves_clicked + 1;
+    using = number_of_saves_clicked % 2;
+    
+    // creating a odd function
+    // function isOdd(num) { return num % 2;}
+    // if(using==true) {
+
+    //   window.alert("hi");
+    // }
+    // else if(using==false) {
+
+    //   window.alert("no");
+    // }
+    
+
+    // window.alert(using);
+
+    if(using==true) {
+
     html2canvas(document.getElementById('capture_2')).then(function(canvas) {
-        document.getElementById('where_to_append').appendChild(canvas);
+        document.getElementById('where_to_append_1').appendChild(canvas);
         var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
-    });
+
+        });
+
+        // creating a new div such that the price can work with Snipcart!!!!
+        var new_buy_button = document.createElement('div');
+
+        document.getElementById('where_to_append_1').appendChild(new_buy_button);
+      
+         new_buy_button.innerHTML = '<div class="center_main_image"> <p> Saved image ' + number_of_saves_clicked + '</p> </div> <div class="center_main_image"> <p> Price: £' + current_price + '</p> </div> <div class="center_main_image"> <button class="snipcart-add-item add_to_cart_1 id="my_button data-item-id="2" data-item-name="Personalised Passport Cover" data-item-stackable="false" data-item-description= "Passport Colour: '+colour_picked+'. Number of Charms: '+number_of_charms_selected+' . Number of Name Tags: '+number_of_nameTags_selected+'. Name tag one text: '+cart_nameTag_description+' " data-item-image = "img/passport_colours/3.png"  data-item-price="' + current_price + '" data-item-quantity="1" data-item-url="file:///C:/Users/james/Desktop/play%20around/docs/personalise_passport.html#!/" data-item-description="Personalised passport cover"> Add to Basket </button> </div>';
+        }
+
+        else if(using==false) {
+
+        html2canvas(document.getElementById('capture_2')).then(function(canvas) {
+        document.getElementById('where_to_append_2').appendChild(canvas);
+        var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+
+        });
+
+        // creating a new div such that the price can work with Snipcart!!!!
+        var new_buy_button = document.createElement('div');
+
+        document.getElementById('where_to_append_2').appendChild(new_buy_button);
+      
+         new_buy_button.innerHTML = '<div class="center_main_image"> <p> Saved image ' + number_of_saves_clicked + '</p> </div> <div class="center_main_image"> <p> Price: £' + current_price + '</p> </div> <div class="center_main_image"> <button class="snipcart-add-item add_to_cart_1 id="my_button data-item-id="2" data-item-name="Personalised Passport Cover" data-item-stackable="false" data-item-description= "Passport Colour: '+colour_picked+'. Number of Charms: '+number_of_charms_selected+' . Number of Name Tags: '+number_of_nameTags_selected+'. Name tag one text: '+cart_nameTag_description+' " data-item-image = "img/passport_colours/3.png"  data-item-price="' + current_price + '" data-item-quantity="1" data-item-url="file:///C:/Users/james/Desktop/play%20around/docs/personalise_passport.html#!/" data-item-description="Personalised passport cover"> Add to Basket </button> </div>';
+        }
+
+     // else if (isodd(number_of_saves_clicked = 0)) {
+
+     //  html2canvas(document.getElementById('capture_2')).then(function(canvas) {
+     //    document.getElementById('where_to_append_2').appendChild(canvas);
+     //    var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+
+     //    });
+
+     //    // creating a new div such that the price can work with Snipcart!!!!
+     //    var new_buy_button = document.createElement('div');
+
+     //    document.getElementById('where_to_append_2').appendChild(new_buy_button);
+      
+     //     new_buy_button.innerHTML = '<div class="center_main_image"> <p> Saved image ' + number_of_saves_clicked + '</p> </div> <div class="center_main_image"> <p> Price: £' + current_price + '</p> </div> <div class="center_main_image"> <button class="snipcart-add-item add_to_cart_1 id="my_button data-item-id="2" data-item-name="Personalised Passport Cover" data-item-stackable="false" data-item-description= "Passport Colour: '+colour_picked+'. Number of Charms: '+number_of_charms_selected+' . Number of Name Tags: '+number_of_nameTags_selected+'. Name tag one text: '+cart_nameTag_description+' " data-item-image = "img/passport_colours/3.png"  data-item-price="' + current_price + '" data-item-quantity="1" data-item-url="file:///C:/Users/james/Desktop/play%20around/docs/personalise_passport.html#!/" data-item-description="Personalised passport cover"> Add to Basket </button> </div>';    
+
+
+
+
+     // }
+
+
+
+
+
+         // new_buy_button.stlye.padding = "0px";
+         // new_buy_button.style.margin = "0px";
+
+         // <div class="container">
+         //    <div class="row">
+
+         //    <!-- Sidebar-->
+         //        <div class="sidebar col-xl-3 col-lg-4 order-lg-1">
+
+        // <div class="center_main_image">
+        //   <button
+        //     class="snipcart-add-item add_to_cart_1"
+        //     id="my-button"
+        //     data-item-id="2"
+        //     data-item-name="Passport Cover"
+        //     data-item-stackable="false"
+        //     data-item-description= data-item-name + "Colour:pink etc."
+        //     data-item-image = "img/passport_colours/3.png"
+        //     data-item-price="12.00"
+        //     data-item-quantity="1"
+        //     data-item-custom1="Text"
+        //     data-item-url="file:///C:/Users/james/Desktop/play%20around/docs/personalise_passport.html#!/"
+        //     data-item-description="Personalised passport cover">
+        //         Add to basket
+        //   </button>
+        // </div>
+
+
 
 // this code saves the middle block as an image to be downloaded - however we want to append then cosntantly to the page
 //     html2canvas(document.querySelector("#capture")).then(canvas => {

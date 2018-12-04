@@ -421,7 +421,7 @@
   cursor:pointer;
   transition:800ms ease all;
   outline:none;
-  margin-bottom: 10%;
+  margin-bottom: 2%;
 }
 .add_to_cart_1:hover{
   background:#fff;
